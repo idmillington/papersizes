@@ -57,9 +57,6 @@ Australian / Pacific Sizes
 
 .. autodata:: papersizes.F4
 
-Canadian Sizes
---------------
-
 US Sizes
 --------
 

@@ -226,17 +226,26 @@ A = __build_iso_269_series('A', PaperSize(841*mm, 1189*mm))
 """The ISO 269 A-series of paper sizes.
 
 These are used as the standard paper size in almost every country of
-the world (the US being the most noteable exception)."""
+the world (the US being the most noteable exception).
+
+There are module constants for A0 - A11 sizes, e.g. `papersizes.A4`.
+"""
 
 B = __build_iso_269_series('B', PaperSize(1000*mm, 1414*mm))
-"""The ISO 269 B-series of paper sizes."""
+"""The ISO 269 B-series of paper sizes.
+
+There are module constants for B0 - B11 sizes, e.g. `papersizes.B4`.
+"""
 
 C = __build_iso_269_series('C', PaperSize(917*mm, 1297*mm))
 """The ISO 269 C-series of sizes.
 
 These are most commonly used as standard envelope sizes to fit unfolded
 paper of the corresponding A-size. So C5 envelopes fit A5 paper, or A4
-paper folded in half."""
+paper folded in half.
+
+There are module constants for C0-C11 sizes, e.g. `papersizes.C5`.
+"""
 
 THIRD_A4 = PaperSize(A4[0], A4[1]/3.0)
 """The size of an A4 page folded in three on its long axis.
@@ -259,35 +268,44 @@ This is most commonly used as a printer's paper size, where
 the final paper will be cropped down to its corresponding A-series
 size. It is not part of ISO 269, but follows the same page
 proportions. Its sister-series :data:`SRA` is more common in
-commercial printing. Sizes below ``RA4`` are not commonly seen, so are
-omitted from this module."""
+commercial printing. Sizes below ``RA4`` are not commonly seen.
+
+There are module constants for RA0 - RA4 sizes, e.g. `papersizes.RA3`.
+"""
 
 SRA = __build_iso_269_series('SRA', PaperSize(900*mm, 1280*mm), 0, 4)
 """An oversized version of the ISO 269 A-series of papers.
 
 These are used for full-bleed printing. ``SRA2`` is the most common bulk
 paper size for commercial printing, although smaller full-bleed digital
-presses use ``SRA3``. Sizes below ``SRA4`` are not commonly seen, so are
-omitted from this module."""
+presses use ``SRA3``. Sizes below ``SRA4`` are not commonly seen.
+
+There are module constants for SRA0 - SRA4 sizes, e.g. `papersizes.SRA2`.
+"""
 
 A3_PLUS = PaperSize(329*mm, 483*mm)
 """A slightly oversized version of A4 paper.
 
 This is used for full bleed printing on some inkjet printers."""
 
+
 # Additional Japanese paper sizes
-JIS_A = A
+JIS_A = __build_iso_269_series('JIS_A', PaperSize(841*mm, 1189*mm))
 """The Japanese standard (JIS P 0138) A size papers.
 
 Japan doesn't strictly use the ISO 269 page sizes, it has its own
-national standard (JIS P 0138). The A-size paper in that standard
-conforms to the ISO A-size paper.
+national standard (JIS P 0138). The A-size paper in that standard,
+however, conforms to the ISO A-size paper.
 
 The two standards differ in their allowed tolerances (i.e. a paper
 size that would 'pass' ISO 269 might not be valid JIS-A), but
 the values used in this module for ISO 269 A-series, are within
 the JIS-A tolerances. So for the purposes of this module, the two are
-synonymous."""
+synonymous.
+
+There are module constants for JIS_A0 - JIS_A11 sizes,
+e.g. `papersizes.JIS_A4`.
+"""
 
 JIS_B = __build_iso_269_series('JIS_B', PaperSize(1030*mm, 1456*mm))
 """The Japanese standard (JIS P 0138) B size papers.
@@ -295,7 +313,11 @@ JIS_B = __build_iso_269_series('JIS_B', PaperSize(1030*mm, 1456*mm))
 Japan has its own national standard B size paper (JIS P 0138) that
 follows the ISO 269 page proportions, but has a different reference
 size. This object represents that series. The Japanese B size is
-slightly larger than its ISO cousin."""
+slightly larger than its ISO cousin.
+
+There are module constants for JIS_B0 - JIS_B11 sizes,
+e.g. `papersizes.JIS_B4`.
+"""
 
 SHIROKU_BAN4 = PaperSize(264*mm, 379*mm)
 """The Japanese (JIS P 0138) Shiroku ban size 4, also known as 4x6/4.
