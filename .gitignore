@@ -1,0 +1,7 @@
+*.pyc
+bin/
+build/
+dist/
+argvtypes.egg-info/
+*.sublime-*
+ve/
