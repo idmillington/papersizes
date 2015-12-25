@@ -1,19 +1,39 @@
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
+#!/usr/bin/env python
 
-config = {
-    'description': 'Paper sizes and manipulations',
-    'author': 'Ian Millington',
-    'url': 'https://github.com/idmillington/papersizes',
-    'download_url': 'https://github.com/idmillington/papersizes',
-    'author_email': 'idmillington@gmail.com',
-    'version': '1.0',
-    'install_requires': ['nose'],
-    'packages': ['papersizes'],
-    'scripts': [],
-    'name': 'papersizes'
-}
+from setuptools import setup
 
-setup(**config)
+version = __import__('papersizes').__version__
+
+setup(
+    name='papersizes',
+    packages=[
+        'papersizes'
+        ],
+
+    version=version,
+    description='Paper sizes and manipulations',
+    author='Ian Millington',
+    author_email='idmillington@googlemail.com',
+
+    url='http://github.com/idmillington/papersizes',
+    download_url='https://github.com/idmillington/papersizes/tarball/master',
+
+    keywords=['pdf', 'papersizes', 'print', 'design'],
+    classifiers=[
+        "Programming Language :: Python",
+        "Development Status :: 4 - Beta",
+        "Environment :: Console",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Topic :: Multimedia :: Graphics",
+        ],
+
+    zip_safe=False,
+
+    install_requires=[
+        # Documentation
+        'Sphinx',
+        # Testing
+        'nose']
+    )
