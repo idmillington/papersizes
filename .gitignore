@@ -2,6 +2,6 @@
 bin/
 build/
 dist/
-argvtypes.egg-info/
+*.egg-info/
 *.sublime-*
 ve/
