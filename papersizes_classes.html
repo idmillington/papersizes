@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Paper size classes (papersizes) &mdash; Papersizes 1.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+    <link rel="top" title="Papersizes 1.0.0 documentation" href="index.html" />
+    <link rel="next" title="Units (units)" href="units.html" />
+    <link rel="prev" title="Paper size constants (papersizes)" href="papersizes.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="units.html" title="Units (units)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="papersizes.html" title="Paper size constants (papersizes)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Papersizes 1.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="paper-size-classes-papersizes">
+<h1>Paper size classes (<a class="reference internal" href="papersizes.html#module-papersizes" title="papersizes"><code class="xref py py-mod docutils literal"><span class="pre">papersizes</span></code></a>)<a class="headerlink" href="#paper-size-classes-papersizes" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="papersizes.PaperSize">
+<em class="property">class </em><code class="descclassname">papersizes.</code><code class="descname">PaperSize</code><a class="headerlink" href="#papersizes.PaperSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>The size of a piece of paper.</p>
+<p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
+property, so it is immutable and inextensible. It is used, rather
+than a raw (width, height) tuple, to allow additonal methods to
+be defined.</p>
+<dl class="method">
+<dt id="papersizes.PaperSize.add_bleed">
+<code class="descname">add_bleed</code><span class="sig-paren">(</span><em>paper_size</em>, <em>bleed</em><span class="sig-paren">)</span><a class="headerlink" href="#papersizes.PaperSize.add_bleed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a paper size with the given bleed added.</p>
+<p>Standard bleeds are 3mm internationally and 1/8&#8221; US. Large images and
+die cuts have a larger bleed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="papersizes.PaperSize.area_in_sq_pts">
+<code class="descname">area_in_sq_pts</code><a class="headerlink" href="#papersizes.PaperSize.area_in_sq_pts" title="Permalink to this definition">¶</a></dt>
+<dd><p>The area of this paper.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="papersizes.PaperSize.flip">
+<code class="descname">flip</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#papersizes.PaperSize.flip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a version of this paper size with dimensions reversed.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="papersizes.PaperSize.from_inch">
+<em class="property">classmethod </em><code class="descname">from_inch</code><span class="sig-paren">(</span><em>Class</em>, <em>width_in_inch</em>, <em>height_in_inch</em><span class="sig-paren">)</span><a class="headerlink" href="#papersizes.PaperSize.from_inch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts from width and height in inches into standard pts.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="papersizes.PaperSize.from_mm">
+<em class="property">classmethod </em><code class="descname">from_mm</code><span class="sig-paren">(</span><em>Class</em>, <em>width_in_mm</em>, <em>height_in_mm</em><span class="sig-paren">)</span><a class="headerlink" href="#papersizes.PaperSize.from_mm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts from width and height in mm into standard pts.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="papersizes.PaperSize.from_tuple">
+<em class="property">classmethod </em><code class="descname">from_tuple</code><span class="sig-paren">(</span><em>Class</em>, <em>tuple_</em><span class="sig-paren">)</span><a class="headerlink" href="#papersizes.PaperSize.from_tuple" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts a tuple of width, height into a paper size.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="papersizes.PaperSize.is_approximately">
+<code class="descname">is_approximately</code><span class="sig-paren">(</span><em>other</em>, <em>tolerance=0.2834645669291339</em><span class="sig-paren">)</span><a class="headerlink" href="#papersizes.PaperSize.is_approximately" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the given two paper sizes are the same.</p>
+<p>Arguments:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">other</span></code></dt>
+<dd>The paper size to compare against. This can be given as any
+(width, height) tuple, it doesn&#8217;t have to be a PaperSize
+instance.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="papersizes.PaperSize.is_landscape">
+<code class="descname">is_landscape</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#papersizes.PaperSize.is_landscape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if this paper is landscape oriented.</p>
+<p>Square paper is neither landscape or portrait.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="papersizes.PaperSize.is_portrait">
+<code class="descname">is_portrait</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#papersizes.PaperSize.is_portrait" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if this paper is portrait oriented.</p>
+<p>Square paper is neither landscape or portrait.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="papersizes.PaperSize.is_square">
+<code class="descname">is_square</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#papersizes.PaperSize.is_square" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if this paper is square.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="papersizes.PaperSize.landscape">
+<code class="descname">landscape</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#papersizes.PaperSize.landscape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a version of this paper size in landscape orientation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="papersizes.PaperSize.large_square">
+<code class="descname">large_square</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#papersizes.PaperSize.large_square" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a square paper size using the larger dimension.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="papersizes.PaperSize.portrait">
+<code class="descname">portrait</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#papersizes.PaperSize.portrait" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a version of this paper size in portrait orientation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="papersizes.PaperSize.round_to_mm">
+<code class="descname">round_to_mm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#papersizes.PaperSize.round_to_mm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a paper size with dimensions rounded to the nearest mm.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="papersizes.PaperSize.small_square">
+<code class="descname">small_square</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#papersizes.PaperSize.small_square" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a square paper size using the smaller dimension.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="papersizes.ISO269Series">
+<em class="property">class </em><code class="descclassname">papersizes.</code><code class="descname">ISO269Series</code><span class="sig-paren">(</span><em>initial_size</em>, <em>initial_number=0</em><span class="sig-paren">)</span><a class="headerlink" href="#papersizes.ISO269Series" title="Permalink to this definition">¶</a></dt>
+<dd><p>A set of paper sizes conforming to ISO 269.</p>
+<p>ISO 269 specifies tolerances of at least 1mm in page sizes and
+these are often used to make sure that each page size is an
+integer number of mm in each direction. So A4 is of width 210mm,
+although A0 is 841mm wide. This breaks the normal halving rule,
+but is a widespread standard.</p>
+<p>Instances of this class can be used to retrieve paper sizes by
+using subscript notation: <code class="docutils literal"><span class="pre">A[5]</span></code>, for example. There is no limit
+to the large (lower numbered) sizes that can be calculated in this
+way. Because this class always rounds to the nearest millimeter,
+very small paper sizes (high numbered) will be meaningless.</p>
+<p>Arguments:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">initial_size</span></code></dt>
+<dd>The &#8216;reference&#8217; paper size for this series. This is usually a
+large size, most commonly the 0-size. This can be given as any
+(width, height) tuple, it doesn&#8217;t have to be a PaperSize instance.</dd>
+<dt><code class="docutils literal"><span class="pre">initial_number</span></code></dt>
+<dd>The size number of the initial paper size given in the first
+argument.</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="papersizes.html"
+                        title="previous chapter">Paper size constants (<code class="docutils literal"><span class="pre">papersizes</span></code>)</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="units.html"
+                        title="next chapter">Units (<code class="docutils literal"><span class="pre">units</span></code>)</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="sources/papersizes_classes.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="units.html" title="Units (units)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="papersizes.html" title="Paper size constants (papersizes)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Papersizes 1.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Ian Millington.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.3.
+    </div>
+  </body>
+</html>
