@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Paper size constants (papersizes) &mdash; Papersizes 1.0.0 documentation</title>
+    <title>Paper size constants (papersizes) &mdash; Papersizes 0.5.1 documentation</title>
     
     <link rel="stylesheet" href="static/classic.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '1.0.0',
+        VERSION:     '0.5.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,8 +23,8 @@
     <script type="text/javascript" src="static/jquery.js"></script>
     <script type="text/javascript" src="static/underscore.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
-    <link rel="top" title="Papersizes 1.0.0 documentation" href="index.html" />
-    <link rel="next" title="Paper size classes (papersizes)" href="papersizes_classes.html" />
+    <link rel="top" title="Papersizes 0.5.1 documentation" href="index.html" />
+    <link rel="next" title="Paper size classes (papersizes.papersize)" href="papersize.html" />
     <link rel="prev" title="Papersizes" href="index.html" /> 
   </head>
   <body role="document">
@@ -38,12 +38,12 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="papersizes_classes.html" title="Paper size classes (papersizes)"
+          <a href="papersize.html" title="Paper size classes (papersizes.papersize)"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="index.html" title="Papersizes"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Papersizes 1.0.0 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Papersizes 0.5.1 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -52,14 +52,16 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="module-papersizes">
-<span id="paper-size-constants-papersizes"></span><h1>Paper size constants (<a class="reference internal" href="#module-papersizes" title="papersizes"><code class="xref py py-mod docutils literal"><span class="pre">papersizes</span></code></a>)<a class="headerlink" href="#module-papersizes" title="Permalink to this headline">¶</a></h1>
-<p>A module containing commonly used paper sizes, for design and layout.</p>
+  <div class="section" id="module-papersizes.papersizes">
+<span id="paper-size-constants-papersizes"></span><h1>Paper size constants (<code class="xref py py-mod docutils literal"><span class="pre">papersizes</span></code>)<a class="headerlink" href="#module-papersizes.papersizes" title="Permalink to this headline">¶</a></h1>
+<p>A library of standard paper sizes from around the world.</p>
+<p>Paper sizes defined in this module are portrait oriented unless
+specifically noted.</p>
 <div class="section" id="international-standard-sizes">
 <h2>International Standard Sizes<a class="headerlink" href="#international-standard-sizes" title="Permalink to this headline">¶</a></h2>
 <dl class="data">
-<dt id="papersizes.A">
-<code class="descclassname">papersizes.</code><code class="descname">A</code><a class="headerlink" href="#papersizes.A" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.A">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">A</code><a class="headerlink" href="#papersizes.papersizes.A" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ISO 269 A-series of paper sizes.</p>
 <p>These are used as the standard paper size in almost every country of
 the world (the US being the most noteable exception).</p>
@@ -67,15 +69,15 @@ the world (the US being the most noteable exception).</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.B">
-<code class="descclassname">papersizes.</code><code class="descname">B</code><a class="headerlink" href="#papersizes.B" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.B">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">B</code><a class="headerlink" href="#papersizes.papersizes.B" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ISO 269 B-series of paper sizes.</p>
 <p>There are module constants for B0 - B11 sizes, e.g. <cite>papersizes.B4</cite>.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.C">
-<code class="descclassname">papersizes.</code><code class="descname">C</code><a class="headerlink" href="#papersizes.C" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.C">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">C</code><a class="headerlink" href="#papersizes.papersizes.C" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ISO 269 C-series of sizes.</p>
 <p>These are most commonly used as standard envelope sizes to fit unfolded
 paper of the corresponding A-size. So C5 envelopes fit A5 paper, or A4
@@ -86,20 +88,20 @@ paper folded in half.</p>
 <div class="section" id="printer-s-oversizes">
 <h3>Printer&#8217;s Oversizes<a class="headerlink" href="#printer-s-oversizes" title="Permalink to this headline">¶</a></h3>
 <dl class="data">
-<dt id="papersizes.RA">
-<code class="descclassname">papersizes.</code><code class="descname">RA</code><a class="headerlink" href="#papersizes.RA" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.RA">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">RA</code><a class="headerlink" href="#papersizes.papersizes.RA" title="Permalink to this definition">¶</a></dt>
 <dd><p>A slightly oversized version of the ISO 269 A-series of papers.</p>
 <p>This is most commonly used as a printer&#8217;s paper size, where
 the final paper will be cropped down to its corresponding A-series
 size. It is not part of ISO 269, but follows the same page
-proportions. Its sister-series <a class="reference internal" href="#papersizes.SRA" title="papersizes.SRA"><code class="xref py py-data docutils literal"><span class="pre">SRA</span></code></a> is more common in
+proportions. Its sister-series <a class="reference internal" href="#papersizes.papersizes.SRA" title="papersizes.papersizes.SRA"><code class="xref py py-data docutils literal"><span class="pre">SRA</span></code></a> is more common in
 commercial printing. Sizes below <code class="docutils literal"><span class="pre">RA4</span></code> are not commonly seen.</p>
 <p>There are module constants for RA0 - RA4 sizes, e.g. <cite>papersizes.RA3</cite>.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.SRA">
-<code class="descclassname">papersizes.</code><code class="descname">SRA</code><a class="headerlink" href="#papersizes.SRA" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.SRA">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">SRA</code><a class="headerlink" href="#papersizes.papersizes.SRA" title="Permalink to this definition">¶</a></dt>
 <dd><p>An oversized version of the ISO 269 A-series of papers.</p>
 <p>These are used for full-bleed printing. <code class="docutils literal"><span class="pre">SRA2</span></code> is the most common bulk
 paper size for commercial printing, although smaller full-bleed digital
@@ -107,25 +109,34 @@ presses use <code class="docutils literal"><span class="pre">SRA3</span></code>.
 <p>There are module constants for SRA0 - SRA4 sizes, e.g. <cite>papersizes.SRA2</cite>.</p>
 </dd></dl>
 
+<dl class="data">
+<dt id="papersizes.papersizes.A3_PLUS">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">A3_PLUS</code><a class="headerlink" href="#papersizes.papersizes.A3_PLUS" title="Permalink to this definition">¶</a></dt>
+<dd><p>A slightly oversized version of A4 paper.</p>
+<p>This is used for full bleed printing on some inkjet printers.</p>
+</dd></dl>
+
 </div>
 <div class="section" id="derived-sizes">
 <h3>Derived Sizes<a class="headerlink" href="#derived-sizes" title="Permalink to this headline">¶</a></h3>
 <dl class="data">
-<dt id="papersizes.THIRD_A4">
-<code class="descclassname">papersizes.</code><code class="descname">THIRD_A4</code><a class="headerlink" href="#papersizes.THIRD_A4" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.THIRD_A4">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">THIRD_A4</code><a class="headerlink" href="#papersizes.papersizes.THIRD_A4" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of an A4 page folded in three on its long axis.</p>
 <p>This is a common paper size in European businesses, where it acts as a
 &#8216;compliment slip.</p>
+<p>This is in landscape orientation.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.DL">
-<code class="descclassname">papersizes.</code><code class="descname">DL</code><a class="headerlink" href="#papersizes.DL" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.DL">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">DL</code><a class="headerlink" href="#papersizes.papersizes.DL" title="Permalink to this definition">¶</a></dt>
 <dd><p>The envelope size to fit a third of an A4 sheet.</p>
-<p>Though it can be used for <a class="reference internal" href="#papersizes.THIRD_A4" title="papersizes.THIRD_A4"><code class="xref py py-data docutils literal"><span class="pre">THIRD_A4</span></code></a> compliment slips, envelopes of
+<p>Though it can be used for <a class="reference internal" href="#papersizes.papersizes.THIRD_A4" title="papersizes.papersizes.THIRD_A4"><code class="xref py py-data docutils literal"><span class="pre">THIRD_A4</span></code></a> compliment slips, envelopes of
 this size are more commonly used to hold an A4 sheet folded into three.
 This and C5, are the most common envelope size for business communications
 in Europe.</p>
+<p>This is in landscape orientation.</p>
 </dd></dl>
 
 </div>
@@ -133,8 +144,8 @@ in Europe.</p>
 <div class="section" id="japanese-sizes">
 <h2>Japanese Sizes<a class="headerlink" href="#japanese-sizes" title="Permalink to this headline">¶</a></h2>
 <dl class="data">
-<dt id="papersizes.JIS_A">
-<code class="descclassname">papersizes.</code><code class="descname">JIS_A</code><a class="headerlink" href="#papersizes.JIS_A" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.JIS_A">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">JIS_A</code><a class="headerlink" href="#papersizes.papersizes.JIS_A" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Japanese standard (JIS P 0138) A size papers.</p>
 <p>Japan doesn&#8217;t strictly use the ISO 269 page sizes, it has its own
 national standard (JIS P 0138). The A-size paper in that standard,
@@ -149,8 +160,8 @@ e.g. <cite>papersizes.JIS_A4</cite>.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.JIS_B">
-<code class="descclassname">papersizes.</code><code class="descname">JIS_B</code><a class="headerlink" href="#papersizes.JIS_B" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.JIS_B">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">JIS_B</code><a class="headerlink" href="#papersizes.papersizes.JIS_B" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Japanese standard (JIS P 0138) B size papers.</p>
 <p>Japan has its own national standard B size paper (JIS P 0138) that
 follows the ISO 269 page proportions, but has a different reference
@@ -161,33 +172,33 @@ e.g. <cite>papersizes.JIS_B4</cite>.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.SHIROKU_BAN4">
-<code class="descclassname">papersizes.</code><code class="descname">SHIROKU_BAN4</code><a class="headerlink" href="#papersizes.SHIROKU_BAN4" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.SHIROKU_BAN4">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">SHIROKU_BAN4</code><a class="headerlink" href="#papersizes.papersizes.SHIROKU_BAN4" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Japanese (JIS P 0138) Shiroku ban size 4, also known as 4x6/4.</p>
 <p>Note that the SHIROKU-series don&#8217;t use the ISO 269 paper proportions,
 and so can&#8217;t be halved to make the next size down.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.SHIROKU_BAN5">
-<code class="descclassname">papersizes.</code><code class="descname">SHIROKU_BAN5</code><a class="headerlink" href="#papersizes.SHIROKU_BAN5" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.SHIROKU_BAN5">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">SHIROKU_BAN5</code><a class="headerlink" href="#papersizes.papersizes.SHIROKU_BAN5" title="Permalink to this definition">¶</a></dt>
 <dd><p>The JIS P 0138 Shiroku ban size 5, also known as 4x6/5.</p>
-<p>See also <a class="reference internal" href="#papersizes.SHIROKU_BAN5_VARIANT" title="papersizes.SHIROKU_BAN5_VARIANT"><code class="xref py py-data docutils literal"><span class="pre">SHIROKU_BAN5_VARIANT</span></code></a>.</p>
+<p>See also <a class="reference internal" href="#papersizes.papersizes.SHIROKU_BAN5_VARIANT" title="papersizes.papersizes.SHIROKU_BAN5_VARIANT"><code class="xref py py-data docutils literal"><span class="pre">SHIROKU_BAN5_VARIANT</span></code></a>.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.SHIROKU_BAN6">
-<code class="descclassname">papersizes.</code><code class="descname">SHIROKU_BAN6</code><a class="headerlink" href="#papersizes.SHIROKU_BAN6" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.SHIROKU_BAN6">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">SHIROKU_BAN6</code><a class="headerlink" href="#papersizes.papersizes.SHIROKU_BAN6" title="Permalink to this definition">¶</a></dt>
 <dd><p>The JIS P 0138 Shiroku ban size 6, also known as 4x6/6.</p>
 </dd></dl>
 
 <div class="section" id="non-standard">
 <h3>Non-Standard<a class="headerlink" href="#non-standard" title="Permalink to this headline">¶</a></h3>
 <dl class="data">
-<dt id="papersizes.SHIROKU_BAN5_VARIANT">
-<code class="descclassname">papersizes.</code><code class="descname">SHIROKU_BAN5_VARIANT</code><a class="headerlink" href="#papersizes.SHIROKU_BAN5_VARIANT" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.SHIROKU_BAN5_VARIANT">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">SHIROKU_BAN5_VARIANT</code><a class="headerlink" href="#papersizes.papersizes.SHIROKU_BAN5_VARIANT" title="Permalink to this definition">¶</a></dt>
 <dd><p>A traditional Shiroku ban size 5 variant.</p>
-<p>The standard size for Shiroku ban 5 is <a class="reference internal" href="#papersizes.SHIROKU_BAN5" title="papersizes.SHIROKU_BAN5"><code class="xref py py-data docutils literal"><span class="pre">SHIROKU_BAN5</span></code></a>. This variant
+<p>The standard size for Shiroku ban 5 is <a class="reference internal" href="#papersizes.papersizes.SHIROKU_BAN5" title="papersizes.papersizes.SHIROKU_BAN5"><code class="xref py py-data docutils literal"><span class="pre">SHIROKU_BAN5</span></code></a>. This variant
 arises when the paper is cut from a larger sheet. This ambiguity derives
 from this paper as a historical paper size, with variations from one
 paper-maker to the next. The variant size isn&#8217;t part of JIS P 0138.</p>
@@ -198,29 +209,29 @@ paper-maker to the next. The variant size isn&#8217;t part of JIS P 0138.</p>
 <div class="section" id="swedish-sizes">
 <h2>Swedish Sizes<a class="headerlink" href="#swedish-sizes" title="Permalink to this headline">¶</a></h2>
 <dl class="data">
-<dt id="papersizes.SIS_G5">
-<code class="descclassname">papersizes.</code><code class="descname">SIS_G5</code><a class="headerlink" href="#papersizes.SIS_G5" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.SIS_G5">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">SIS_G5</code><a class="headerlink" href="#papersizes.papersizes.SIS_G5" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Sweedish standard (SIS 014711) G5 paper.</p>
 <p>Sweeden uses the ISO 269 paper sizes, but adds additional paper sizes in
 its national standard SIS 014711. There are only two common sizes that
-are not ISO 269 specified. This one and <a class="reference internal" href="#papersizes.SIS_E5" title="papersizes.SIS_E5"><code class="xref py py-data docutils literal"><span class="pre">SIS_E5</span></code></a>.</p>
+are not ISO 269 specified. This one and <a class="reference internal" href="#papersizes.papersizes.SIS_E5" title="papersizes.papersizes.SIS_E5"><code class="xref py py-data docutils literal"><span class="pre">SIS_E5</span></code></a>.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.SIS_E5">
-<code class="descclassname">papersizes.</code><code class="descname">SIS_E5</code><a class="headerlink" href="#papersizes.SIS_E5" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.SIS_E5">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">SIS_E5</code><a class="headerlink" href="#papersizes.papersizes.SIS_E5" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Sweedish standard (SIS 014711) E5 paper.</p>
 <p>Sweeden uses the ISO 269 paper sizes, but adds additional paper sizes in
 its national standard SIS 014711. There are only two common sizes that
-are not ISO 269 specified. This one and <a class="reference internal" href="#papersizes.SIS_G5" title="papersizes.SIS_G5"><code class="xref py py-data docutils literal"><span class="pre">SIS_G5</span></code></a>.</p>
+are not ISO 269 specified. This one and <a class="reference internal" href="#papersizes.papersizes.SIS_G5" title="papersizes.papersizes.SIS_G5"><code class="xref py py-data docutils literal"><span class="pre">SIS_G5</span></code></a>.</p>
 </dd></dl>
 
 </div>
 <div class="section" id="australian-pacific-sizes">
 <h2>Australian / Pacific Sizes<a class="headerlink" href="#australian-pacific-sizes" title="Permalink to this headline">¶</a></h2>
 <dl class="data">
-<dt id="papersizes.F4">
-<code class="descclassname">papersizes.</code><code class="descname">F4</code><a class="headerlink" href="#papersizes.F4" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.F4">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">F4</code><a class="headerlink" href="#papersizes.papersizes.F4" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -232,85 +243,85 @@ be defined.</p>
 <div class="section" id="us-sizes">
 <h2>US Sizes<a class="headerlink" href="#us-sizes" title="Permalink to this headline">¶</a></h2>
 <dl class="data">
-<dt id="papersizes.LETTER">
-<code class="descclassname">papersizes.</code><code class="descname">LETTER</code><a class="headerlink" href="#papersizes.LETTER" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.LETTER">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">LETTER</code><a class="headerlink" href="#papersizes.papersizes.LETTER" title="Permalink to this definition">¶</a></dt>
 <dd><p>The most common US paper size.</p>
 <p>At one point variations of this paper size were used around the world,
 now it is largely confined to the US and its immediate neighbours. It
 is the size A in the US national standard ANSI Y 14.1, and is therefore
-a synonym of <a class="reference internal" href="#papersizes.ANSI_A" title="papersizes.ANSI_A"><code class="xref py py-data docutils literal"><span class="pre">ANSI_A</span></code></a>.</p>
+a synonym of <a class="reference internal" href="#papersizes.papersizes.ANSI_A" title="papersizes.papersizes.ANSI_A"><code class="xref py py-data docutils literal"><span class="pre">ANSI_A</span></code></a>.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.LEGAL">
-<code class="descclassname">papersizes.</code><code class="descname">LEGAL</code><a class="headerlink" href="#papersizes.LEGAL" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.LEGAL">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">LEGAL</code><a class="headerlink" href="#papersizes.papersizes.LEGAL" title="Permalink to this definition">¶</a></dt>
 <dd><p>A taller version of the US Letter paper size.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.TABLOID">
-<code class="descclassname">papersizes.</code><code class="descname">TABLOID</code><a class="headerlink" href="#papersizes.TABLOID" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.TABLOID">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">TABLOID</code><a class="headerlink" href="#papersizes.papersizes.TABLOID" title="Permalink to this definition">¶</a></dt>
 <dd><p>The larger standard US paper size.</p>
-<p>This is exactly the size of two <a class="reference internal" href="#papersizes.LETTER" title="papersizes.LETTER"><code class="xref py py-data docutils literal"><span class="pre">LETTER</span></code></a> sheets. This is a
-(more archaic) synonym for <a class="reference internal" href="#papersizes.ELEVEN_BY_SEVENTEEN" title="papersizes.ELEVEN_BY_SEVENTEEN"><code class="xref py py-data docutils literal"><span class="pre">ELEVEN_BY_SEVENTEEN</span></code></a>, but should be
+<p>This is exactly the size of two <a class="reference internal" href="#papersizes.papersizes.LETTER" title="papersizes.papersizes.LETTER"><code class="xref py py-data docutils literal"><span class="pre">LETTER</span></code></a> sheets. This is a
+(more archaic) synonym for <a class="reference internal" href="#papersizes.papersizes.ELEVEN_BY_SEVENTEEN" title="papersizes.papersizes.ELEVEN_BY_SEVENTEEN"><code class="xref py py-data docutils literal"><span class="pre">ELEVEN_BY_SEVENTEEN</span></code></a>, but should be
 treated as deprecated, since <code class="docutils literal"><span class="pre">TABLOID</span></code> can refer to other sizes in
 other contexts (in the printing of newspapers, for example). It also
-matches the <a class="reference internal" href="#papersizes.ANSI_B" title="papersizes.ANSI_B"><code class="xref py py-data docutils literal"><span class="pre">ANSI_B</span></code></a> US national standard paper size.</p>
+matches the <a class="reference internal" href="#papersizes.papersizes.ANSI_B" title="papersizes.papersizes.ANSI_B"><code class="xref py py-data docutils literal"><span class="pre">ANSI_B</span></code></a> US national standard paper size.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.ELEVEN_BY_SEVENTEEN">
-<code class="descclassname">papersizes.</code><code class="descname">ELEVEN_BY_SEVENTEEN</code><a class="headerlink" href="#papersizes.ELEVEN_BY_SEVENTEEN" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.ELEVEN_BY_SEVENTEEN">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">ELEVEN_BY_SEVENTEEN</code><a class="headerlink" href="#papersizes.papersizes.ELEVEN_BY_SEVENTEEN" title="Permalink to this definition">¶</a></dt>
 <dd><p>The larger standard US paper size.</p>
-<p>This is exactly the size of two <a class="reference internal" href="#papersizes.LETTER" title="papersizes.LETTER"><code class="xref py py-data docutils literal"><span class="pre">LETTER</span></code></a> sheets. This is a more
-modern synonym for <a class="reference internal" href="#papersizes.TABLOID" title="papersizes.TABLOID"><code class="xref py py-data docutils literal"><span class="pre">TABLOID</span></code></a>, and the <a class="reference internal" href="#papersizes.ANSI_B" title="papersizes.ANSI_B"><code class="xref py py-data docutils literal"><span class="pre">ANSI_B</span></code></a> US national
+<p>This is exactly the size of two <a class="reference internal" href="#papersizes.papersizes.LETTER" title="papersizes.papersizes.LETTER"><code class="xref py py-data docutils literal"><span class="pre">LETTER</span></code></a> sheets. This is a more
+modern synonym for <a class="reference internal" href="#papersizes.papersizes.TABLOID" title="papersizes.papersizes.TABLOID"><code class="xref py py-data docutils literal"><span class="pre">TABLOID</span></code></a>, and the <a class="reference internal" href="#papersizes.papersizes.ANSI_B" title="papersizes.papersizes.ANSI_B"><code class="xref py py-data docutils literal"><span class="pre">ANSI_B</span></code></a> US national
 standard paper size.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.LEDGER">
-<code class="descclassname">papersizes.</code><code class="descname">LEDGER</code><a class="headerlink" href="#papersizes.LEDGER" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.LEDGER">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">LEDGER</code><a class="headerlink" href="#papersizes.papersizes.LEDGER" title="Permalink to this definition">¶</a></dt>
 <dd><p>A standard size for old accounding ledgers.</p>
-<p>This is the same paper size as the <a class="reference internal" href="#papersizes.ELEVEN_BY_SEVENTEEN" title="papersizes.ELEVEN_BY_SEVENTEEN"><code class="xref py py-data docutils literal"><span class="pre">ELEVEN_BY_SEVENTEEN</span></code></a>, or
-<a class="reference internal" href="#papersizes.TABLOID" title="papersizes.TABLOID"><code class="xref py py-data docutils literal"><span class="pre">TABLOID</span></code></a> paper, but in landscape orientation.</p>
+<p>This is the same paper size as the <a class="reference internal" href="#papersizes.papersizes.ELEVEN_BY_SEVENTEEN" title="papersizes.papersizes.ELEVEN_BY_SEVENTEEN"><code class="xref py py-data docutils literal"><span class="pre">ELEVEN_BY_SEVENTEEN</span></code></a>, or
+<a class="reference internal" href="#papersizes.papersizes.TABLOID" title="papersizes.papersizes.TABLOID"><code class="xref py py-data docutils literal"><span class="pre">TABLOID</span></code></a> paper, but in landscape orientation.</p>
 </dd></dl>
 
 <div class="section" id="ansi-sizes">
 <h3>ANSI Sizes<a class="headerlink" href="#ansi-sizes" title="Permalink to this headline">¶</a></h3>
 <dl class="data">
-<dt id="papersizes.ANSI_A">
-<code class="descclassname">papersizes.</code><code class="descname">ANSI_A</code><a class="headerlink" href="#papersizes.ANSI_A" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.ANSI_A">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">ANSI_A</code><a class="headerlink" href="#papersizes.papersizes.ANSI_A" title="Permalink to this definition">¶</a></dt>
 <dd><p>Size A in the US national standard ANSI Y 14.1.</p>
-<p>This is a synonym for <a class="reference internal" href="#papersizes.LETTER" title="papersizes.LETTER"><code class="xref py py-data docutils literal"><span class="pre">LETTER</span></code></a>. Note that this is a single
+<p>This is a synonym for <a class="reference internal" href="#papersizes.papersizes.LETTER" title="papersizes.papersizes.LETTER"><code class="xref py py-data docutils literal"><span class="pre">LETTER</span></code></a>. Note that this is a single
 paper size, not a series of paper sizes, as per the ISO 269 A-sizes.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.ANSI_B">
-<code class="descclassname">papersizes.</code><code class="descname">ANSI_B</code><a class="headerlink" href="#papersizes.ANSI_B" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.ANSI_B">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">ANSI_B</code><a class="headerlink" href="#papersizes.papersizes.ANSI_B" title="Permalink to this definition">¶</a></dt>
 <dd><p>Size B in the US national standard ANSI Y 14.1.</p>
-<p>This is a synonym for <a class="reference internal" href="#papersizes.ELEVEN_BY_SEVENTEEN" title="papersizes.ELEVEN_BY_SEVENTEEN"><code class="xref py py-data docutils literal"><span class="pre">ELEVEN_BY_SEVENTEEN</span></code></a>, and <a class="reference internal" href="#papersizes.TABLOID" title="papersizes.TABLOID"><code class="xref py py-data docutils literal"><span class="pre">TABLOID</span></code></a>.
+<p>This is a synonym for <a class="reference internal" href="#papersizes.papersizes.ELEVEN_BY_SEVENTEEN" title="papersizes.papersizes.ELEVEN_BY_SEVENTEEN"><code class="xref py py-data docutils literal"><span class="pre">ELEVEN_BY_SEVENTEEN</span></code></a>, and <a class="reference internal" href="#papersizes.papersizes.TABLOID" title="papersizes.papersizes.TABLOID"><code class="xref py py-data docutils literal"><span class="pre">TABLOID</span></code></a>.
 Note that this is a single paper size, not a series of paper sizes, as
 per the ISO 269 B-sizes.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.ANSI_C">
-<code class="descclassname">papersizes.</code><code class="descname">ANSI_C</code><a class="headerlink" href="#papersizes.ANSI_C" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.ANSI_C">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">ANSI_C</code><a class="headerlink" href="#papersizes.papersizes.ANSI_C" title="Permalink to this definition">¶</a></dt>
 <dd><p>Size C in the US national standard ANSI Y 14.1.</p>
 <p>Note that this is a single paper size, not a series of paper sizes, as
 per the ISO 269 C-sizes.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.ANSI_D">
-<code class="descclassname">papersizes.</code><code class="descname">ANSI_D</code><a class="headerlink" href="#papersizes.ANSI_D" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.ANSI_D">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">ANSI_D</code><a class="headerlink" href="#papersizes.papersizes.ANSI_D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Size D in the US national standard ANSI Y 14.1.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.ANSI_E">
-<code class="descclassname">papersizes.</code><code class="descname">ANSI_E</code><a class="headerlink" href="#papersizes.ANSI_E" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.ANSI_E">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">ANSI_E</code><a class="headerlink" href="#papersizes.papersizes.ANSI_E" title="Permalink to this definition">¶</a></dt>
 <dd><p>Size E in the US national standard ANSI Y 14.1.</p>
 </dd></dl>
 
@@ -319,8 +330,8 @@ per the ISO 269 C-sizes.</p>
 <div class="section" id="other-sizes">
 <h2>Other Sizes<a class="headerlink" href="#other-sizes" title="Permalink to this headline">¶</a></h2>
 <dl class="data">
-<dt id="papersizes.ARCH_A">
-<code class="descclassname">papersizes.</code><code class="descname">ARCH_A</code><a class="headerlink" href="#papersizes.ARCH_A" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.ARCH_A">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">ARCH_A</code><a class="headerlink" href="#papersizes.papersizes.ARCH_A" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -329,8 +340,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.ARCH_B">
-<code class="descclassname">papersizes.</code><code class="descname">ARCH_B</code><a class="headerlink" href="#papersizes.ARCH_B" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.ARCH_B">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">ARCH_B</code><a class="headerlink" href="#papersizes.papersizes.ARCH_B" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -339,8 +350,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.ARCH_C">
-<code class="descclassname">papersizes.</code><code class="descname">ARCH_C</code><a class="headerlink" href="#papersizes.ARCH_C" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.ARCH_C">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">ARCH_C</code><a class="headerlink" href="#papersizes.papersizes.ARCH_C" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -349,8 +360,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.ARCH_D">
-<code class="descclassname">papersizes.</code><code class="descname">ARCH_D</code><a class="headerlink" href="#papersizes.ARCH_D" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.ARCH_D">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">ARCH_D</code><a class="headerlink" href="#papersizes.papersizes.ARCH_D" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -359,8 +370,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.ARCH_E">
-<code class="descclassname">papersizes.</code><code class="descname">ARCH_E</code><a class="headerlink" href="#papersizes.ARCH_E" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.ARCH_E">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">ARCH_E</code><a class="headerlink" href="#papersizes.papersizes.ARCH_E" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -369,8 +380,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.ARCH_E1">
-<code class="descclassname">papersizes.</code><code class="descname">ARCH_E1</code><a class="headerlink" href="#papersizes.ARCH_E1" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.ARCH_E1">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">ARCH_E1</code><a class="headerlink" href="#papersizes.papersizes.ARCH_E1" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -379,8 +390,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.FILOFAX_MINI">
-<code class="descclassname">papersizes.</code><code class="descname">FILOFAX_MINI</code><a class="headerlink" href="#papersizes.FILOFAX_MINI" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.FILOFAX_MINI">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">FILOFAX_MINI</code><a class="headerlink" href="#papersizes.papersizes.FILOFAX_MINI" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -389,8 +400,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.FILOFAX_POCKET">
-<code class="descclassname">papersizes.</code><code class="descname">FILOFAX_POCKET</code><a class="headerlink" href="#papersizes.FILOFAX_POCKET" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.FILOFAX_POCKET">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">FILOFAX_POCKET</code><a class="headerlink" href="#papersizes.papersizes.FILOFAX_POCKET" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -399,8 +410,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.FILOFAX_PERSONAL">
-<code class="descclassname">papersizes.</code><code class="descname">FILOFAX_PERSONAL</code><a class="headerlink" href="#papersizes.FILOFAX_PERSONAL" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.FILOFAX_PERSONAL">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">FILOFAX_PERSONAL</code><a class="headerlink" href="#papersizes.papersizes.FILOFAX_PERSONAL" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -409,8 +420,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.FILOFAX_SLIMLINE">
-<code class="descclassname">papersizes.</code><code class="descname">FILOFAX_SLIMLINE</code><a class="headerlink" href="#papersizes.FILOFAX_SLIMLINE" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.FILOFAX_SLIMLINE">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">FILOFAX_SLIMLINE</code><a class="headerlink" href="#papersizes.papersizes.FILOFAX_SLIMLINE" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -419,8 +430,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.FILOFAX_A5">
-<code class="descclassname">papersizes.</code><code class="descname">FILOFAX_A5</code><a class="headerlink" href="#papersizes.FILOFAX_A5" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.FILOFAX_A5">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">FILOFAX_A5</code><a class="headerlink" href="#papersizes.papersizes.FILOFAX_A5" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -429,8 +440,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.FRANKLIN_COVEY_POCKET">
-<code class="descclassname">papersizes.</code><code class="descname">FRANKLIN_COVEY_POCKET</code><a class="headerlink" href="#papersizes.FRANKLIN_COVEY_POCKET" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.FRANKLIN_COVEY_POCKET">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">FRANKLIN_COVEY_POCKET</code><a class="headerlink" href="#papersizes.papersizes.FRANKLIN_COVEY_POCKET" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -439,8 +450,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.FRANKLIN_COVEY_COMPACT">
-<code class="descclassname">papersizes.</code><code class="descname">FRANKLIN_COVEY_COMPACT</code><a class="headerlink" href="#papersizes.FRANKLIN_COVEY_COMPACT" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.FRANKLIN_COVEY_COMPACT">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">FRANKLIN_COVEY_COMPACT</code><a class="headerlink" href="#papersizes.papersizes.FRANKLIN_COVEY_COMPACT" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -449,8 +460,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.FRANKLIN_COVEY_CLASSIC">
-<code class="descclassname">papersizes.</code><code class="descname">FRANKLIN_COVEY_CLASSIC</code><a class="headerlink" href="#papersizes.FRANKLIN_COVEY_CLASSIC" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.FRANKLIN_COVEY_CLASSIC">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">FRANKLIN_COVEY_CLASSIC</code><a class="headerlink" href="#papersizes.papersizes.FRANKLIN_COVEY_CLASSIC" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -459,8 +470,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.ORGANIZER_J">
-<code class="descclassname">papersizes.</code><code class="descname">ORGANIZER_J</code><a class="headerlink" href="#papersizes.ORGANIZER_J" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.ORGANIZER_J">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">ORGANIZER_J</code><a class="headerlink" href="#papersizes.papersizes.ORGANIZER_J" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -469,8 +480,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.ORGANIZER_K">
-<code class="descclassname">papersizes.</code><code class="descname">ORGANIZER_K</code><a class="headerlink" href="#papersizes.ORGANIZER_K" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.ORGANIZER_K">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">ORGANIZER_K</code><a class="headerlink" href="#papersizes.papersizes.ORGANIZER_K" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -479,8 +490,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.ORGANIZER_L">
-<code class="descclassname">papersizes.</code><code class="descname">ORGANIZER_L</code><a class="headerlink" href="#papersizes.ORGANIZER_L" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.ORGANIZER_L">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">ORGANIZER_L</code><a class="headerlink" href="#papersizes.papersizes.ORGANIZER_L" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -489,8 +500,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.ORGANIZER_M">
-<code class="descclassname">papersizes.</code><code class="descname">ORGANIZER_M</code><a class="headerlink" href="#papersizes.ORGANIZER_M" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.ORGANIZER_M">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">ORGANIZER_M</code><a class="headerlink" href="#papersizes.papersizes.ORGANIZER_M" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -499,38 +510,26 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.INDEX_CARD_5X3">
-<code class="descclassname">papersizes.</code><code class="descname">INDEX_CARD_5X3</code><a class="headerlink" href="#papersizes.INDEX_CARD_5X3" title="Permalink to this definition">¶</a></dt>
-<dd><p>The size of a piece of paper.</p>
-<p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
-property, so it is immutable and inextensible. It is used, rather
-than a raw (width, height) tuple, to allow additonal methods to
-be defined.</p>
+<dt id="papersizes.papersizes.INDEX_CARD_5X3">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">INDEX_CARD_5X3</code><a class="headerlink" href="#papersizes.papersizes.INDEX_CARD_5X3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Landscape orientation</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.INDEX_CARD_6X4">
-<code class="descclassname">papersizes.</code><code class="descname">INDEX_CARD_6X4</code><a class="headerlink" href="#papersizes.INDEX_CARD_6X4" title="Permalink to this definition">¶</a></dt>
-<dd><p>The size of a piece of paper.</p>
-<p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
-property, so it is immutable and inextensible. It is used, rather
-than a raw (width, height) tuple, to allow additonal methods to
-be defined.</p>
+<dt id="papersizes.papersizes.INDEX_CARD_6X4">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">INDEX_CARD_6X4</code><a class="headerlink" href="#papersizes.papersizes.INDEX_CARD_6X4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Landscape orientation</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.INDEX_CARD_8X5">
-<code class="descclassname">papersizes.</code><code class="descname">INDEX_CARD_8X5</code><a class="headerlink" href="#papersizes.INDEX_CARD_8X5" title="Permalink to this definition">¶</a></dt>
-<dd><p>The size of a piece of paper.</p>
-<p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
-property, so it is immutable and inextensible. It is used, rather
-than a raw (width, height) tuple, to allow additonal methods to
-be defined.</p>
+<dt id="papersizes.papersizes.INDEX_CARD_8X5">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">INDEX_CARD_8X5</code><a class="headerlink" href="#papersizes.papersizes.INDEX_CARD_8X5" title="Permalink to this definition">¶</a></dt>
+<dd><p>Landscape orientation</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.ISO_BUSINESS_CARD">
-<code class="descclassname">papersizes.</code><code class="descname">ISO_BUSINESS_CARD</code><a class="headerlink" href="#papersizes.ISO_BUSINESS_CARD" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.ISO_BUSINESS_CARD">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">ISO_BUSINESS_CARD</code><a class="headerlink" href="#papersizes.papersizes.ISO_BUSINESS_CARD" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -539,8 +538,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.US_BUSINESS_CARD">
-<code class="descclassname">papersizes.</code><code class="descname">US_BUSINESS_CARD</code><a class="headerlink" href="#papersizes.US_BUSINESS_CARD" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.US_BUSINESS_CARD">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">US_BUSINESS_CARD</code><a class="headerlink" href="#papersizes.papersizes.US_BUSINESS_CARD" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -549,8 +548,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.UK_BUSINESS_CARD">
-<code class="descclassname">papersizes.</code><code class="descname">UK_BUSINESS_CARD</code><a class="headerlink" href="#papersizes.UK_BUSINESS_CARD" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.UK_BUSINESS_CARD">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">UK_BUSINESS_CARD</code><a class="headerlink" href="#papersizes.papersizes.UK_BUSINESS_CARD" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -559,8 +558,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.JAPANESE_BUSINESS_CARD">
-<code class="descclassname">papersizes.</code><code class="descname">JAPANESE_BUSINESS_CARD</code><a class="headerlink" href="#papersizes.JAPANESE_BUSINESS_CARD" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.JAPANESE_BUSINESS_CARD">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">JAPANESE_BUSINESS_CARD</code><a class="headerlink" href="#papersizes.papersizes.JAPANESE_BUSINESS_CARD" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -569,8 +568,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.PLAYING_CARD_POKER">
-<code class="descclassname">papersizes.</code><code class="descname">PLAYING_CARD_POKER</code><a class="headerlink" href="#papersizes.PLAYING_CARD_POKER" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.PLAYING_CARD_POKER">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">PLAYING_CARD_POKER</code><a class="headerlink" href="#papersizes.papersizes.PLAYING_CARD_POKER" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -579,8 +578,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.PLAYING_CARD_BRIDGE">
-<code class="descclassname">papersizes.</code><code class="descname">PLAYING_CARD_BRIDGE</code><a class="headerlink" href="#papersizes.PLAYING_CARD_BRIDGE" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.PLAYING_CARD_BRIDGE">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">PLAYING_CARD_BRIDGE</code><a class="headerlink" href="#papersizes.papersizes.PLAYING_CARD_BRIDGE" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -589,8 +588,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.PLAYING_CARD">
-<code class="descclassname">papersizes.</code><code class="descname">PLAYING_CARD</code><a class="headerlink" href="#papersizes.PLAYING_CARD" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.PLAYING_CARD">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">PLAYING_CARD</code><a class="headerlink" href="#papersizes.papersizes.PLAYING_CARD" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -599,8 +598,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.INCHIE">
-<code class="descclassname">papersizes.</code><code class="descname">INCHIE</code><a class="headerlink" href="#papersizes.INCHIE" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.INCHIE">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">INCHIE</code><a class="headerlink" href="#papersizes.papersizes.INCHIE" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -609,8 +608,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.ATC">
-<code class="descclassname">papersizes.</code><code class="descname">ATC</code><a class="headerlink" href="#papersizes.ATC" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.ATC">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">ATC</code><a class="headerlink" href="#papersizes.papersizes.ATC" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -619,8 +618,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.SCRAPBOOK_6">
-<code class="descclassname">papersizes.</code><code class="descname">SCRAPBOOK_6</code><a class="headerlink" href="#papersizes.SCRAPBOOK_6" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.SCRAPBOOK_6">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">SCRAPBOOK_6</code><a class="headerlink" href="#papersizes.papersizes.SCRAPBOOK_6" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -629,8 +628,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.SCRAPBOOK_7">
-<code class="descclassname">papersizes.</code><code class="descname">SCRAPBOOK_7</code><a class="headerlink" href="#papersizes.SCRAPBOOK_7" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.SCRAPBOOK_7">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">SCRAPBOOK_7</code><a class="headerlink" href="#papersizes.papersizes.SCRAPBOOK_7" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -639,8 +638,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.SCRAPBOOK_8">
-<code class="descclassname">papersizes.</code><code class="descname">SCRAPBOOK_8</code><a class="headerlink" href="#papersizes.SCRAPBOOK_8" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.SCRAPBOOK_8">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">SCRAPBOOK_8</code><a class="headerlink" href="#papersizes.papersizes.SCRAPBOOK_8" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -649,8 +648,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.SMALL_SCRAPBOOK">
-<code class="descclassname">papersizes.</code><code class="descname">SMALL_SCRAPBOOK</code><a class="headerlink" href="#papersizes.SMALL_SCRAPBOOK" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.SMALL_SCRAPBOOK">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">SMALL_SCRAPBOOK</code><a class="headerlink" href="#papersizes.papersizes.SMALL_SCRAPBOOK" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -659,8 +658,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.LARGE_SCRAPBOOK">
-<code class="descclassname">papersizes.</code><code class="descname">LARGE_SCRAPBOOK</code><a class="headerlink" href="#papersizes.LARGE_SCRAPBOOK" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.LARGE_SCRAPBOOK">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">LARGE_SCRAPBOOK</code><a class="headerlink" href="#papersizes.papersizes.LARGE_SCRAPBOOK" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -669,8 +668,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.SCRAPBOOK">
-<code class="descclassname">papersizes.</code><code class="descname">SCRAPBOOK</code><a class="headerlink" href="#papersizes.SCRAPBOOK" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.SCRAPBOOK">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">SCRAPBOOK</code><a class="headerlink" href="#papersizes.papersizes.SCRAPBOOK" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -679,8 +678,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.MOO_CARD">
-<code class="descclassname">papersizes.</code><code class="descname">MOO_CARD</code><a class="headerlink" href="#papersizes.MOO_CARD" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.MOO_CARD">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">MOO_CARD</code><a class="headerlink" href="#papersizes.papersizes.MOO_CARD" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -689,8 +688,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.BROADSHEET_NEWSPAPER">
-<code class="descclassname">papersizes.</code><code class="descname">BROADSHEET_NEWSPAPER</code><a class="headerlink" href="#papersizes.BROADSHEET_NEWSPAPER" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.BROADSHEET_NEWSPAPER">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">BROADSHEET_NEWSPAPER</code><a class="headerlink" href="#papersizes.papersizes.BROADSHEET_NEWSPAPER" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -699,8 +698,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.BERLINER_NEWSPAPER">
-<code class="descclassname">papersizes.</code><code class="descname">BERLINER_NEWSPAPER</code><a class="headerlink" href="#papersizes.BERLINER_NEWSPAPER" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.BERLINER_NEWSPAPER">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">BERLINER_NEWSPAPER</code><a class="headerlink" href="#papersizes.papersizes.BERLINER_NEWSPAPER" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -709,8 +708,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.MIDI_NEWSPAPER">
-<code class="descclassname">papersizes.</code><code class="descname">MIDI_NEWSPAPER</code><a class="headerlink" href="#papersizes.MIDI_NEWSPAPER" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.MIDI_NEWSPAPER">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">MIDI_NEWSPAPER</code><a class="headerlink" href="#papersizes.papersizes.MIDI_NEWSPAPER" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -719,8 +718,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.TABLOID_NEWSPAPER">
-<code class="descclassname">papersizes.</code><code class="descname">TABLOID_NEWSPAPER</code><a class="headerlink" href="#papersizes.TABLOID_NEWSPAPER" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.TABLOID_NEWSPAPER">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">TABLOID_NEWSPAPER</code><a class="headerlink" href="#papersizes.papersizes.TABLOID_NEWSPAPER" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -729,8 +728,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.GOVERNMENT_LEGAL">
-<code class="descclassname">papersizes.</code><code class="descname">GOVERNMENT_LEGAL</code><a class="headerlink" href="#papersizes.GOVERNMENT_LEGAL" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.GOVERNMENT_LEGAL">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">GOVERNMENT_LEGAL</code><a class="headerlink" href="#papersizes.papersizes.GOVERNMENT_LEGAL" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -739,18 +738,14 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.JUNIOR_LEGAL">
-<code class="descclassname">papersizes.</code><code class="descname">JUNIOR_LEGAL</code><a class="headerlink" href="#papersizes.JUNIOR_LEGAL" title="Permalink to this definition">¶</a></dt>
-<dd><p>The size of a piece of paper.</p>
-<p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
-property, so it is immutable and inextensible. It is used, rather
-than a raw (width, height) tuple, to allow additonal methods to
-be defined.</p>
+<dt id="papersizes.papersizes.JUNIOR_LEGAL">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">JUNIOR_LEGAL</code><a class="headerlink" href="#papersizes.papersizes.JUNIOR_LEGAL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Landscape orientation</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.COMPACT">
-<code class="descclassname">papersizes.</code><code class="descname">COMPACT</code><a class="headerlink" href="#papersizes.COMPACT" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.COMPACT">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">COMPACT</code><a class="headerlink" href="#papersizes.papersizes.COMPACT" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -759,8 +754,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.MEMO">
-<code class="descclassname">papersizes.</code><code class="descname">MEMO</code><a class="headerlink" href="#papersizes.MEMO" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.MEMO">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">MEMO</code><a class="headerlink" href="#papersizes.papersizes.MEMO" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -769,8 +764,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.STATEMENT">
-<code class="descclassname">papersizes.</code><code class="descname">STATEMENT</code><a class="headerlink" href="#papersizes.STATEMENT" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.STATEMENT">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">STATEMENT</code><a class="headerlink" href="#papersizes.papersizes.STATEMENT" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -779,8 +774,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.HALF_LETTER">
-<code class="descclassname">papersizes.</code><code class="descname">HALF_LETTER</code><a class="headerlink" href="#papersizes.HALF_LETTER" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.HALF_LETTER">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">HALF_LETTER</code><a class="headerlink" href="#papersizes.papersizes.HALF_LETTER" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -789,8 +784,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.MONARCH">
-<code class="descclassname">papersizes.</code><code class="descname">MONARCH</code><a class="headerlink" href="#papersizes.MONARCH" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.MONARCH">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">MONARCH</code><a class="headerlink" href="#papersizes.papersizes.MONARCH" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -799,8 +794,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.EXECUTIVE">
-<code class="descclassname">papersizes.</code><code class="descname">EXECUTIVE</code><a class="headerlink" href="#papersizes.EXECUTIVE" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.EXECUTIVE">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">EXECUTIVE</code><a class="headerlink" href="#papersizes.papersizes.EXECUTIVE" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -809,8 +804,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.FOLIO">
-<code class="descclassname">papersizes.</code><code class="descname">FOLIO</code><a class="headerlink" href="#papersizes.FOLIO" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.FOLIO">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">FOLIO</code><a class="headerlink" href="#papersizes.papersizes.FOLIO" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -819,8 +814,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.FOOLSCAP">
-<code class="descclassname">papersizes.</code><code class="descname">FOOLSCAP</code><a class="headerlink" href="#papersizes.FOOLSCAP" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.FOOLSCAP">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">FOOLSCAP</code><a class="headerlink" href="#papersizes.papersizes.FOOLSCAP" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -829,8 +824,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.QUARTO">
-<code class="descclassname">papersizes.</code><code class="descname">QUARTO</code><a class="headerlink" href="#papersizes.QUARTO" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.QUARTO">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">QUARTO</code><a class="headerlink" href="#papersizes.papersizes.QUARTO" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -839,8 +834,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.SUPER_B">
-<code class="descclassname">papersizes.</code><code class="descname">SUPER_B</code><a class="headerlink" href="#papersizes.SUPER_B" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.SUPER_B">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">SUPER_B</code><a class="headerlink" href="#papersizes.papersizes.SUPER_B" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -849,8 +844,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.POST">
-<code class="descclassname">papersizes.</code><code class="descname">POST</code><a class="headerlink" href="#papersizes.POST" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.POST">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">POST</code><a class="headerlink" href="#papersizes.papersizes.POST" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -859,8 +854,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.CROWN">
-<code class="descclassname">papersizes.</code><code class="descname">CROWN</code><a class="headerlink" href="#papersizes.CROWN" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.CROWN">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">CROWN</code><a class="headerlink" href="#papersizes.papersizes.CROWN" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -869,8 +864,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.LARGE_POST">
-<code class="descclassname">papersizes.</code><code class="descname">LARGE_POST</code><a class="headerlink" href="#papersizes.LARGE_POST" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.LARGE_POST">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">LARGE_POST</code><a class="headerlink" href="#papersizes.papersizes.LARGE_POST" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -879,8 +874,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.DEMY">
-<code class="descclassname">papersizes.</code><code class="descname">DEMY</code><a class="headerlink" href="#papersizes.DEMY" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.DEMY">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">DEMY</code><a class="headerlink" href="#papersizes.papersizes.DEMY" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -889,8 +884,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.MEDIUM">
-<code class="descclassname">papersizes.</code><code class="descname">MEDIUM</code><a class="headerlink" href="#papersizes.MEDIUM" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.MEDIUM">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">MEDIUM</code><a class="headerlink" href="#papersizes.papersizes.MEDIUM" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -899,8 +894,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.BROADSHEET">
-<code class="descclassname">papersizes.</code><code class="descname">BROADSHEET</code><a class="headerlink" href="#papersizes.BROADSHEET" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.BROADSHEET">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">BROADSHEET</code><a class="headerlink" href="#papersizes.papersizes.BROADSHEET" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -909,8 +904,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.ROYAL">
-<code class="descclassname">papersizes.</code><code class="descname">ROYAL</code><a class="headerlink" href="#papersizes.ROYAL" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.ROYAL">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">ROYAL</code><a class="headerlink" href="#papersizes.papersizes.ROYAL" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -919,8 +914,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.ELEPHANT">
-<code class="descclassname">papersizes.</code><code class="descname">ELEPHANT</code><a class="headerlink" href="#papersizes.ELEPHANT" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.ELEPHANT">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">ELEPHANT</code><a class="headerlink" href="#papersizes.papersizes.ELEPHANT" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -929,8 +924,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.DOUBLE_DEMY">
-<code class="descclassname">papersizes.</code><code class="descname">DOUBLE_DEMY</code><a class="headerlink" href="#papersizes.DOUBLE_DEMY" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.DOUBLE_DEMY">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">DOUBLE_DEMY</code><a class="headerlink" href="#papersizes.papersizes.DOUBLE_DEMY" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -939,8 +934,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.QUAD_DEMY">
-<code class="descclassname">papersizes.</code><code class="descname">QUAD_DEMY</code><a class="headerlink" href="#papersizes.QUAD_DEMY" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.QUAD_DEMY">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">QUAD_DEMY</code><a class="headerlink" href="#papersizes.papersizes.QUAD_DEMY" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -949,8 +944,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.A_FORMAT_PAPERBACK">
-<code class="descclassname">papersizes.</code><code class="descname">A_FORMAT_PAPERBACK</code><a class="headerlink" href="#papersizes.A_FORMAT_PAPERBACK" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.A_FORMAT_PAPERBACK">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">A_FORMAT_PAPERBACK</code><a class="headerlink" href="#papersizes.papersizes.A_FORMAT_PAPERBACK" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -959,8 +954,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.B_FORMAT_PAPERBACK">
-<code class="descclassname">papersizes.</code><code class="descname">B_FORMAT_PAPERBACK</code><a class="headerlink" href="#papersizes.B_FORMAT_PAPERBACK" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.B_FORMAT_PAPERBACK">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">B_FORMAT_PAPERBACK</code><a class="headerlink" href="#papersizes.papersizes.B_FORMAT_PAPERBACK" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -969,8 +964,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.C_FORMAT_PAPERBACK">
-<code class="descclassname">papersizes.</code><code class="descname">C_FORMAT_PAPERBACK</code><a class="headerlink" href="#papersizes.C_FORMAT_PAPERBACK" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.C_FORMAT_PAPERBACK">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">C_FORMAT_PAPERBACK</code><a class="headerlink" href="#papersizes.papersizes.C_FORMAT_PAPERBACK" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -979,8 +974,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.TRADE_PAPERBACK">
-<code class="descclassname">papersizes.</code><code class="descname">TRADE_PAPERBACK</code><a class="headerlink" href="#papersizes.TRADE_PAPERBACK" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.TRADE_PAPERBACK">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">TRADE_PAPERBACK</code><a class="headerlink" href="#papersizes.papersizes.TRADE_PAPERBACK" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -989,8 +984,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.LULU_US_TRADE_PAPERBACK">
-<code class="descclassname">papersizes.</code><code class="descname">LULU_US_TRADE_PAPERBACK</code><a class="headerlink" href="#papersizes.LULU_US_TRADE_PAPERBACK" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.LULU_US_TRADE_PAPERBACK">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">LULU_US_TRADE_PAPERBACK</code><a class="headerlink" href="#papersizes.papersizes.LULU_US_TRADE_PAPERBACK" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -999,8 +994,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.LULU_COMIC_BOOK">
-<code class="descclassname">papersizes.</code><code class="descname">LULU_COMIC_BOOK</code><a class="headerlink" href="#papersizes.LULU_COMIC_BOOK" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.LULU_COMIC_BOOK">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">LULU_COMIC_BOOK</code><a class="headerlink" href="#papersizes.papersizes.LULU_COMIC_BOOK" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -1009,8 +1004,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.LULU_POCKET_BOOK">
-<code class="descclassname">papersizes.</code><code class="descname">LULU_POCKET_BOOK</code><a class="headerlink" href="#papersizes.LULU_POCKET_BOOK" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.LULU_POCKET_BOOK">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">LULU_POCKET_BOOK</code><a class="headerlink" href="#papersizes.papersizes.LULU_POCKET_BOOK" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -1019,18 +1014,14 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.LULU_LANDSCAPE_BOOK">
-<code class="descclassname">papersizes.</code><code class="descname">LULU_LANDSCAPE_BOOK</code><a class="headerlink" href="#papersizes.LULU_LANDSCAPE_BOOK" title="Permalink to this definition">¶</a></dt>
-<dd><p>The size of a piece of paper.</p>
-<p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
-property, so it is immutable and inextensible. It is used, rather
-than a raw (width, height) tuple, to allow additonal methods to
-be defined.</p>
+<dt id="papersizes.papersizes.LULU_LANDSCAPE_BOOK">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">LULU_LANDSCAPE_BOOK</code><a class="headerlink" href="#papersizes.papersizes.LULU_LANDSCAPE_BOOK" title="Permalink to this definition">¶</a></dt>
+<dd><p>Landscape orientation</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.LULU_SMALL_SQUARE_BOOK">
-<code class="descclassname">papersizes.</code><code class="descname">LULU_SMALL_SQUARE_BOOK</code><a class="headerlink" href="#papersizes.LULU_SMALL_SQUARE_BOOK" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.LULU_SMALL_SQUARE_BOOK">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">LULU_SMALL_SQUARE_BOOK</code><a class="headerlink" href="#papersizes.papersizes.LULU_SMALL_SQUARE_BOOK" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -1039,8 +1030,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.LULU_ROYAL_BOOK">
-<code class="descclassname">papersizes.</code><code class="descname">LULU_ROYAL_BOOK</code><a class="headerlink" href="#papersizes.LULU_ROYAL_BOOK" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.LULU_ROYAL_BOOK">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">LULU_ROYAL_BOOK</code><a class="headerlink" href="#papersizes.papersizes.LULU_ROYAL_BOOK" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -1049,8 +1040,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.LULU_CROWN_QUARTO_BOOK">
-<code class="descclassname">papersizes.</code><code class="descname">LULU_CROWN_QUARTO_BOOK</code><a class="headerlink" href="#papersizes.LULU_CROWN_QUARTO_BOOK" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.LULU_CROWN_QUARTO_BOOK">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">LULU_CROWN_QUARTO_BOOK</code><a class="headerlink" href="#papersizes.papersizes.LULU_CROWN_QUARTO_BOOK" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -1059,8 +1050,8 @@ be defined.</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="papersizes.LULU_SQUARE_BOOK">
-<code class="descclassname">papersizes.</code><code class="descname">LULU_SQUARE_BOOK</code><a class="headerlink" href="#papersizes.LULU_SQUARE_BOOK" title="Permalink to this definition">¶</a></dt>
+<dt id="papersizes.papersizes.LULU_SQUARE_BOOK">
+<code class="descclassname">papersizes.papersizes.</code><code class="descname">LULU_SQUARE_BOOK</code><a class="headerlink" href="#papersizes.papersizes.LULU_SQUARE_BOOK" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of a piece of paper.</p>
 <p>This class inherits from a named tuple and has an empty <code class="docutils literal"><span class="pre">__slots__</span></code>
 property, so it is immutable and inextensible. It is used, rather
@@ -1104,8 +1095,8 @@ be defined.</p>
   <p class="topless"><a href="index.html"
                         title="previous chapter">Papersizes</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="papersizes_classes.html"
-                        title="next chapter">Paper size classes (<code class="docutils literal"><span class="pre">papersizes</span></code>)</a></p>
+  <p class="topless"><a href="papersize.html"
+                        title="next chapter">Paper size classes (<code class="docutils literal"><span class="pre">papersizes.papersize</span></code>)</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -1140,16 +1131,16 @@ be defined.</p>
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="papersizes_classes.html" title="Paper size classes (papersizes)"
+          <a href="papersize.html" title="Paper size classes (papersizes.papersize)"
              >next</a> |</li>
         <li class="right" >
           <a href="index.html" title="Papersizes"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Papersizes 1.0.0 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Papersizes 0.5.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2015, Ian Millington.
+        &copy; Copyright 2006-2015, Ian Millington.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.3.
     </div>
   </body>
