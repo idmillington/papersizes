@@ -3,7 +3,7 @@
 import unittest
 
 import papersizes
-from papersizes import mm, inch
+from papersizes.units import mm, inch
 
 def _near_enough(papersize, target, tolerance=0.25*mm):
 	return abs(papersize[0] - target[0]) <= tolerance and \

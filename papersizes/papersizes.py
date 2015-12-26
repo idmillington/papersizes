@@ -1,213 +1,13 @@
+# -*- coding: utf-8 -*-
 """
-Page sizes and various mechanisms for manipulating them.
+A library of standard paper sizes from around the world.
+
+Paper sizes defined in this module are portrait oriented unless
+specifically noted.
 """
-import math
 import sys
-import collections
-
 from .units import mm, inch
-
-# ----------------------------------------------------------------------------
-# Page size tuple.
-# ----------------------------------------------------------------------------
-
-class PaperSize(collections.namedtuple('PaperSize', 'width height')):
-    """The size of a piece of paper.
-
-    This class inherits from a named tuple and has an empty ``__slots__``
-    property, so it is immutable and inextensible. It is used, rather
-    than a raw (width, height) tuple, to allow additonal methods to
-    be defined."""
-    __slots__ = ()
-
-    @classmethod
-    def from_tuple(Class, tuple_):
-        """Converts a tuple of width, height into a paper size."""
-        return Class(*tuple_)
-
-    @classmethod
-    def from_mm(Class, width_in_mm, height_in_mm):
-        """Converts from width and height in mm into standard pts."""
-        return Class(width_in_mm*mm, height_in_mm*mm)
-
-    @classmethod
-    def from_inch(Class, width_in_inch, height_in_inch):
-        """Converts from width and height in inches into standard pts."""
-        return Class(width_in_inch*inch, height_in_inch*inch)
-
-    @property
-    def area_in_sq_pts(self):
-        """The area of this paper."""
-        return self.width * self.height
-
-    def landscape(self):
-        """Returns a version of this paper size in landscape orientation."""
-        if self.width >= self.height:
-            return self
-        else:
-            return self.flip()
-
-    def portrait(self):
-        """Returns a version of this paper size in portrait orientation."""
-        if self.width <= self.height:
-            return self
-        else:
-            return self.flip()
-
-    def flip(self):
-        """Returns a version of this paper size with dimensions reversed."""
-        return PaperSize(self.height, self.width)
-
-    def small_square(self):
-        """Returns a square paper size using the smaller dimension."""
-        if self.height < self.width:
-            return PaperSize(self.height, self.height)
-        elif self.height == self.width:
-            return self
-        else:
-            return PaperSize(self.width, self.width)
-
-    def large_square(self):
-        """Returns a square paper size using the larger dimension."""
-        if self.height > self.width:
-            return PaperSize(self.height, self.height)
-        elif self.height == self.width:
-            return self
-        else:
-            return PaperSize(self.width, self.width)
-
-    def round_to_mm(self):
-        """Returns a paper size with dimensions rounded to the nearest mm."""
-        return PaperSize(round(self.width / mm)*mm, round(self.height / mm)*mm)
-
-    def is_landscape(self):
-        """Checks if this paper is landscape oriented.
-
-        Square paper is neither landscape or portrait."""
-        return self.width > self.height
-
-    def is_portrait(self):
-        """Checks if this paper is portrait oriented.
-
-        Square paper is neither landscape or portrait."""
-        return self.width < self.height
-
-    def is_square(self):
-        """Checks if this paper is square."""
-        return self.width == self.height
-
-    def is_approximately(self, other, tolerance=0.1*mm):
-        """Checks if the given two paper sizes are the same.
-
-        Arguments:
-
-        ``other``
-            The paper size to compare against. This can be given as any
-            (width, height) tuple, it doesn't have to be a PaperSize
-            instance.
-        """
-        return abs(self.width - other[0]) <= tolerance and \
-            abs(self.height - other[1]) <= tolerance
-
-    def add_bleed(paper_size, bleed):
-        """Returns a paper size with the given bleed added.
-
-        Standard bleeds are 3mm internationally and 1/8" US. Large images and
-        die cuts have a larger bleed."""
-        if bleed != 0.0:
-            return PaperSize(self.width + bleed*2.0, self.height + bleed*2.0)
-        else:
-            return self
-
-    def __repr__(self):
-        return unicode(self)
-
-    def __unicode__(self):
-        return '{0:.0f}x{1:.0f}pt ({2:.0f}x{3:.0f}mm, {4:.1f}x{5:.1f}")'.format(
-                self.width, self.height,
-                self.width / mm, self.height / mm,
-                self.width / inch, self.height / inch)
-
-# ----------------------------------------------------------------------------
-# Page size generator.
-# ----------------------------------------------------------------------------
-
-class ISO269Series(object):
-    """
-    A set of paper sizes conforming to ISO 269.
-
-    ISO 269 specifies tolerances of at least 1mm in page sizes and
-    these are often used to make sure that each page size is an
-    integer number of mm in each direction. So A4 is of width 210mm,
-    although A0 is 841mm wide. This breaks the normal halving rule,
-    but is a widespread standard.
-
-    Instances of this class can be used to retrieve paper sizes by
-    using subscript notation: ``A[5]``, for example. There is no limit
-    to the large (lower numbered) sizes that can be calculated in this
-    way. Because this class always rounds to the nearest millimeter,
-    very small paper sizes (high numbered) will be meaningless.
-
-    Arguments:
-
-    ``initial_size``
-        The 'reference' paper size for this series. This is usually a
-        large size, most commonly the 0-size. This can be given as any
-        (width, height) tuple, it doesn't have to be a PaperSize instance.
-
-    ``initial_number``
-        The size number of the initial paper size given in the first
-        argument.
-    """
-    def __init__(self, initial_size, initial_number=0):
-        # We might be given a plain tuple, so don't use PaperSize.portrait
-        if initial_size[0] > initial_size[1]:
-            initial_size = initial_size[1], initial_size[0]
-        # Store the size internally in mm, so we can do the simplification.
-        initial_in_mm = round(initial_size[0] / mm), round(initial_size[1] / mm)
-        self.cache = {initial_number:initial_in_mm}
-        self.min_cached = initial_number
-        self.max_cached = initial_number
-        self.initial_size = initial_size
-        self.initial_number = initial_number
-
-    def __repr__(self):
-        return "ISO 269 Series, {0} at size {1}".format(
-            repr(self.initial_size),
-            repr(self.initial_number))
-
-    def __getitem__(self, size):
-        if size not in self.cache:
-            if size > self.max_cached:
-                # We're smaller than the last value cached.
-                last = self.cache[self.max_cached]
-                for s in range(self.max_cached+1, size+1):
-                    next = last[1] // 2, last[0]
-                    self.cache[s] = next
-                    last = next
-                self.max_cached = size
-            else:
-                # We're larger than the initial.
-                last = self.cache[self.min_cached]
-                for s in range(self.min_cached-1, size-1, -1):
-                    next = last[1], last[0] * 2
-                    self.cache[s] = next
-                    last = next
-                self.min_cached = size
-
-        # Cached data is in mm, so convert to pts.
-        return PaperSize.from_mm(*self.cache[size])
-
-# Interesting ratios for constructive page sizes.
-FOUR_THIRDS = 4.0 / 3.0 # Old quarto ratio
-ISO_RATIO = 1.4142135623730951 # sqrt(2) : ISO 269 sizes.
-TWO_THIRDS = 1.5 # Old octavo / folio ratio
-PENTAGON_RATIO = 1.5388417685876266 # Ratio of base to height of a pentagon.
-GOLDEN_RATIO = 1.6180339887498949 # (1 + sqrt(5)) / 2
-
-# ----------------------------------------------------------------------------
-# CONSTANTS for specific paper sizes.
-# ----------------------------------------------------------------------------
+from .papersize import PaperSize, ISO269Series
 
 def __build_iso_269_series(prefix, initial, start_number=0, end_number=10):
     """Creates a set of ISO 269 paper sizes in this module's globals.
@@ -221,6 +21,10 @@ def __build_iso_269_series(prefix, initial, start_number=0, end_number=10):
         setattr(module, "%s%d" % (prefix, i), series[i])
 
     return series
+
+# ----------------------------------------------------------------------------
+# CONSTANTS for specific paper sizes.
+# ----------------------------------------------------------------------------
 
 A = __build_iso_269_series('A', PaperSize(841*mm, 1189*mm))
 """The ISO 269 A-series of paper sizes.
@@ -251,7 +55,9 @@ THIRD_A4 = PaperSize(A4[0], A4[1]/3.0)
 """The size of an A4 page folded in three on its long axis.
 
 This is a common paper size in European businesses, where it acts as a
-'compliment slip."""
+'compliment slip.
+
+This is in landscape orientation."""
 
 DL = PaperSize(220*mm, 100*mm)
 """The envelope size to fit a third of an A4 sheet.
@@ -259,7 +65,10 @@ DL = PaperSize(220*mm, 100*mm)
 Though it can be used for :data:`THIRD_A4` compliment slips, envelopes of
 this size are more commonly used to hold an A4 sheet folded into three.
 This and C5, are the most common envelope size for business communications
-in Europe."""
+in Europe.
+
+This is in landscape orientation.
+"""
 
 RA = __build_iso_269_series('RA', PaperSize(860*mm, 1220*mm), 0, 4)
 """A slightly oversized version of the ISO 269 A-series of papers.
@@ -430,11 +239,11 @@ ARCH_E = PaperSize(36*inch, 48*inch)
 ARCH_E1 = PaperSize(30*inch, 42*inch)
 
 # Personal organizer page sizes.
-FILOFAX_MINI = PaperSize(4.25*inch, 2.625*inch)
-FILOFAX_POCKET = PaperSize(4.75*inch, 3.25*inch)
-FILOFAX_PERSONAL = PaperSize(6.75*inch, 3.75*inch)
-FILOFAX_SLIMLINE = PaperSize(6.75*inch, 3.75*inch)
-FILOFAX_A5 = PaperSize(8.25*inch, 5.75*inch)
+FILOFAX_MINI = PaperSize(2.625*inch, 4.25*inch)
+FILOFAX_POCKET = PaperSize(3.25*inch, 4.75*inch, )
+FILOFAX_PERSONAL = PaperSize(3.75*inch, 6.75*inch)
+FILOFAX_SLIMLINE = PaperSize(3.75*inch, 6.75*inch)
+FILOFAX_A5 = PaperSize(5.75*inch, 8.25*inch)
 FRANKLIN_COVEY_POCKET = PaperSize(3.5*inch, 6*inch)
 FRANKLIN_COVEY_COMPACT = PaperSize(4.25*inch, 6.75*inch)
 FRANKLIN_COVEY_CLASSIC = PaperSize(5.5*inch, 8.5*inch)
@@ -444,13 +253,13 @@ ORGANIZER_L = PaperSize(5.5*inch, 8.5*inch)
 ORGANIZER_M = LETTER
 
 # Cards
-INDEX_CARD_5X3 = PaperSize(5*inch, 3*inch)
-INDEX_CARD_6X4 = PaperSize(6*inch, 4*inch)
-INDEX_CARD_8X5 = PaperSize(8*inch, 5*inch)
-ISO_BUSINESS_CARD = PaperSize(85.60*mm, 52.98*mm)
+INDEX_CARD_5X3 = PaperSize(5*inch, 3*inch) #: Landscape orientation
+INDEX_CARD_6X4 = PaperSize(6*inch, 4*inch) #: Landscape orientation
+INDEX_CARD_8X5 = PaperSize(8*inch, 5*inch) #: Landscape orientation
+ISO_BUSINESS_CARD = PaperSize(52.98*mm, 85.60*mm)
 US_BUSINESS_CARD = PaperSize(2*inch, 3.5*inch)
-UK_BUSINESS_CARD = PaperSize(85*mm, 55*mm)
-JAPANESE_BUSINESS_CARD = PaperSize(91*mm, 55*mm)
+UK_BUSINESS_CARD = PaperSize(55*mm, 85*mm)
+JAPANESE_BUSINESS_CARD = PaperSize(55*mm, 91*mm)
 PLAYING_CARD_POKER = B8
 PLAYING_CARD_BRIDGE = PaperSize(56*mm, 88*mm)
 PLAYING_CARD = PLAYING_CARD_BRIDGE
@@ -474,7 +283,7 @@ TABLOID_NEWSPAPER = PaperSize(280*mm, 430*mm)
 
 # Other miscellaneous paper sizes
 GOVERNMENT_LEGAL = PaperSize(8.0*inch, 10.5*inch)
-JUNIOR_LEGAL = PaperSize(8.0*inch, 5.0*inch)
+JUNIOR_LEGAL = PaperSize(8.0*inch, 5.0*inch) #: Landscape orientation
 COMPACT = PaperSize(4.25*inch, 6.75*inch)
 MEMO = ORGANIZER_L
 STATEMENT = MEMO
@@ -506,7 +315,7 @@ TRADE_PAPERBACK = C_FORMAT_PAPERBACK
 LULU_US_TRADE_PAPERBACK = PaperSize(6*inch, 9*inch)
 LULU_COMIC_BOOK = PaperSize(6.625*inch, 10.25*inch)
 LULU_POCKET_BOOK = PaperSize(4.25*inch, 6.875*inch)
-LULU_LANDSCAPE_BOOK = PaperSize(9*inch, 7*inch)
+LULU_LANDSCAPE_BOOK = PaperSize(9*inch, 7*inch) #: Landscape orientation
 LULU_SMALL_SQUARE_BOOK = PaperSize(7.5*inch, 7.5*inch)
 LULU_ROYAL_BOOK = PaperSize(6.139*inch, 9.21*inch)
 LULU_CROWN_QUARTO_BOOK = PaperSize(7.444*inch, 9.681*inch)

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Units and unit conversions used in the papersizes module.
 """
@@ -25,15 +26,27 @@ pt = 1.0
 # Unit conversions
 # ----------------------------------------------------------------------------
 
-def __create_conversions(*units):
-    """Creates a set of conversion ratios for the given constants."""
-    import sys
-    module = sys.modules[__name__]
-    for from_unit in units:
-        from_unit_value = getattr(module, from_unit)
-        for to_unit in units:
-            if from_unit != to_unit:
-                to_unit_value = getattr(module, to_unit)
-                conversion = from_unit_value / to_unit_value
-                setattr(module, "%s2%s" % (from_unit, to_unit), conversion)
-__create_conversions("inch", "mm", "cm", "m", "pt")
+cm2inch = cm / inch
+cm2m = cm / m
+cm2mm = cm / mm
+cm2pt = cm
+
+inch2cm = inch / cm
+inch2m = inch / m
+inch2mm = inch / mm
+inch2pt = inch
+
+m2cm = m / cm
+m2inch = m / inch
+m2mm = m / mm
+m2pt = m
+
+mm2cm = mm / cm
+mm2inch = mm / inch
+mm2m = mm / m
+mm2pt = mm
+
+pt2cm = 1.0 / cm
+pt2inch = 1.0 / inch
+pt2m = 1.0 / m
+pt2mm = 1.0 / mm

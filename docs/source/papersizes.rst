@@ -19,6 +19,8 @@ Printer's Oversizes
 
 .. autodata:: papersizes.SRA
 
+.. autodata:: papersizes.A3_PLUS
+
 Derived Sizes
 """""""""""""
 
