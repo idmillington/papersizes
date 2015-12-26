@@ -1,8 +1,10 @@
-Paper size classes (:mod:`papersize`)
-======================================
+Paper size classes (:mod:`papersizes.papersize`)
+================================================
 
-.. autoclass:: papersizes.papersize.PaperSize
+.. automodule:: papersizes.papersize
+
+.. autoclass:: PaperSize
    :members:
 
-.. autoclass:: papersizes.papersize.ISO269Series
+.. autoclass:: ISO269Series
    :members:

@@ -1,5 +1,5 @@
-Units (:mod:`units`)
-====================
+Units (:mod:`papersizes.units`)
+===============================
 
 .. automodule:: papersizes.units
    :members:

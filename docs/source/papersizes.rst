@@ -1,239 +1,239 @@
 Paper size constants (:mod:`papersizes`)
 ========================================
 
-.. automodule:: papersizes
+.. automodule:: papersizes.papersizes
 
 International Standard Sizes
 ----------------------------
 
-.. autodata:: papersizes.A
+.. autodata:: A
 
-.. autodata:: papersizes.B
+.. autodata:: B
 
-.. autodata:: papersizes.C
+.. autodata:: C
 
 Printer's Oversizes
 """""""""""""""""""
 
-.. autodata:: papersizes.RA
+.. autodata:: RA
 
-.. autodata:: papersizes.SRA
+.. autodata:: SRA
 
-.. autodata:: papersizes.A3_PLUS
+.. autodata:: A3_PLUS
 
 Derived Sizes
 """""""""""""
 
-.. autodata:: papersizes.THIRD_A4
+.. autodata:: THIRD_A4
 
-.. autodata:: papersizes.DL
+.. autodata:: DL
 
 Japanese Sizes
 --------------
 
-.. autodata:: papersizes.JIS_A
+.. autodata:: JIS_A
 
-.. autodata:: papersizes.JIS_B
+.. autodata:: JIS_B
 
-.. autodata:: papersizes.SHIROKU_BAN4
+.. autodata:: SHIROKU_BAN4
 
-.. autodata:: papersizes.SHIROKU_BAN5
+.. autodata:: SHIROKU_BAN5
 
-.. autodata:: papersizes.SHIROKU_BAN6
+.. autodata:: SHIROKU_BAN6
 
 Non-Standard
 """"""""""""
 
-.. autodata:: papersizes.SHIROKU_BAN5_VARIANT
+.. autodata:: SHIROKU_BAN5_VARIANT
 
 
 Swedish Sizes
 -------------
 
-.. autodata:: papersizes.SIS_G5
+.. autodata:: SIS_G5
 
-.. autodata:: papersizes.SIS_E5
+.. autodata:: SIS_E5
 
 Australian / Pacific Sizes
 --------------------------
 
-.. autodata:: papersizes.F4
+.. autodata:: F4
 
 US Sizes
 --------
 
-.. autodata:: papersizes.LETTER
+.. autodata:: LETTER
 
-.. autodata:: papersizes.LEGAL
+.. autodata:: LEGAL
 
-.. autodata:: papersizes.TABLOID
+.. autodata:: TABLOID
 
-.. autodata:: papersizes.ELEVEN_BY_SEVENTEEN
+.. autodata:: ELEVEN_BY_SEVENTEEN
 
-.. autodata:: papersizes.LEDGER
+.. autodata:: LEDGER
 
 ANSI Sizes
 """"""""""
 
-.. autodata:: papersizes.ANSI_A
+.. autodata:: ANSI_A
 
-.. autodata:: papersizes.ANSI_B
+.. autodata:: ANSI_B
 
-.. autodata:: papersizes.ANSI_C
+.. autodata:: ANSI_C
 
-.. autodata:: papersizes.ANSI_D
+.. autodata:: ANSI_D
 
-.. autodata:: papersizes.ANSI_E
+.. autodata:: ANSI_E
 
 Other Sizes
 -----------
 
-.. autodata:: papersizes.ARCH_A
+.. autodata:: ARCH_A
 
-.. autodata:: papersizes.ARCH_B
+.. autodata:: ARCH_B
 
-.. autodata:: papersizes.ARCH_C
+.. autodata:: ARCH_C
 
-.. autodata:: papersizes.ARCH_D
+.. autodata:: ARCH_D
 
-.. autodata:: papersizes.ARCH_E
+.. autodata:: ARCH_E
 
-.. autodata:: papersizes.ARCH_E1
+.. autodata:: ARCH_E1
 
-.. autodata:: papersizes.FILOFAX_MINI
+.. autodata:: FILOFAX_MINI
 
-.. autodata:: papersizes.FILOFAX_POCKET
+.. autodata:: FILOFAX_POCKET
 
-.. autodata:: papersizes.FILOFAX_PERSONAL
+.. autodata:: FILOFAX_PERSONAL
 
-.. autodata:: papersizes.FILOFAX_SLIMLINE
+.. autodata:: FILOFAX_SLIMLINE
 
-.. autodata:: papersizes.FILOFAX_A5
+.. autodata:: FILOFAX_A5
 
-.. autodata:: papersizes.FRANKLIN_COVEY_POCKET
+.. autodata:: FRANKLIN_COVEY_POCKET
 
-.. autodata:: papersizes.FRANKLIN_COVEY_COMPACT
+.. autodata:: FRANKLIN_COVEY_COMPACT
 
-.. autodata:: papersizes.FRANKLIN_COVEY_CLASSIC
+.. autodata:: FRANKLIN_COVEY_CLASSIC
 
-.. autodata:: papersizes.ORGANIZER_J
+.. autodata:: ORGANIZER_J
 
-.. autodata:: papersizes.ORGANIZER_K
+.. autodata:: ORGANIZER_K
 
-.. autodata:: papersizes.ORGANIZER_L
+.. autodata:: ORGANIZER_L
 
-.. autodata:: papersizes.ORGANIZER_M
+.. autodata:: ORGANIZER_M
 
-.. autodata:: papersizes.INDEX_CARD_5X3
+.. autodata:: INDEX_CARD_5X3
 
-.. autodata:: papersizes.INDEX_CARD_6X4
+.. autodata:: INDEX_CARD_6X4
 
-.. autodata:: papersizes.INDEX_CARD_8X5
+.. autodata:: INDEX_CARD_8X5
 
-.. autodata:: papersizes.ISO_BUSINESS_CARD
+.. autodata:: ISO_BUSINESS_CARD
 
-.. autodata:: papersizes.US_BUSINESS_CARD
+.. autodata:: US_BUSINESS_CARD
 
-.. autodata:: papersizes.UK_BUSINESS_CARD
+.. autodata:: UK_BUSINESS_CARD
 
-.. autodata:: papersizes.JAPANESE_BUSINESS_CARD
+.. autodata:: JAPANESE_BUSINESS_CARD
 
-.. autodata:: papersizes.PLAYING_CARD_POKER
+.. autodata:: PLAYING_CARD_POKER
 
-.. autodata:: papersizes.PLAYING_CARD_BRIDGE
+.. autodata:: PLAYING_CARD_BRIDGE
 
-.. autodata:: papersizes.PLAYING_CARD
+.. autodata:: PLAYING_CARD
 
-.. autodata:: papersizes.INCHIE
+.. autodata:: INCHIE
 
-.. autodata:: papersizes.ATC
+.. autodata:: ATC
 
-.. autodata:: papersizes.SCRAPBOOK_6
+.. autodata:: SCRAPBOOK_6
 
-.. autodata:: papersizes.SCRAPBOOK_7
+.. autodata:: SCRAPBOOK_7
 
-.. autodata:: papersizes.SCRAPBOOK_8
+.. autodata:: SCRAPBOOK_8
 
-.. autodata:: papersizes.SMALL_SCRAPBOOK
+.. autodata:: SMALL_SCRAPBOOK
 
-.. autodata:: papersizes.LARGE_SCRAPBOOK
+.. autodata:: LARGE_SCRAPBOOK
 
-.. autodata:: papersizes.SCRAPBOOK
+.. autodata:: SCRAPBOOK
 
-.. autodata:: papersizes.MOO_CARD
+.. autodata:: MOO_CARD
 
-.. autodata:: papersizes.BROADSHEET_NEWSPAPER
+.. autodata:: BROADSHEET_NEWSPAPER
 
-.. autodata:: papersizes.BERLINER_NEWSPAPER
+.. autodata:: BERLINER_NEWSPAPER
 
-.. autodata:: papersizes.MIDI_NEWSPAPER
+.. autodata:: MIDI_NEWSPAPER
 
-.. autodata:: papersizes.TABLOID_NEWSPAPER
+.. autodata:: TABLOID_NEWSPAPER
 
-.. autodata:: papersizes.GOVERNMENT_LEGAL
+.. autodata:: GOVERNMENT_LEGAL
 
-.. autodata:: papersizes.JUNIOR_LEGAL
+.. autodata:: JUNIOR_LEGAL
 
-.. autodata:: papersizes.COMPACT
+.. autodata:: COMPACT
 
-.. autodata:: papersizes.MEMO
+.. autodata:: MEMO
 
-.. autodata:: papersizes.STATEMENT
+.. autodata:: STATEMENT
 
-.. autodata:: papersizes.HALF_LETTER
+.. autodata:: HALF_LETTER
 
-.. autodata:: papersizes.MONARCH
+.. autodata:: MONARCH
 
-.. autodata:: papersizes.EXECUTIVE
+.. autodata:: EXECUTIVE
 
-.. autodata:: papersizes.FOLIO
+.. autodata:: FOLIO
 
-.. autodata:: papersizes.FOOLSCAP
+.. autodata:: FOOLSCAP
 
-.. autodata:: papersizes.QUARTO
+.. autodata:: QUARTO
 
-.. autodata:: papersizes.SUPER_B
+.. autodata:: SUPER_B
 
-.. autodata:: papersizes.POST
+.. autodata:: POST
 
-.. autodata:: papersizes.CROWN
+.. autodata:: CROWN
 
-.. autodata:: papersizes.LARGE_POST
+.. autodata:: LARGE_POST
 
-.. autodata:: papersizes.DEMY
+.. autodata:: DEMY
 
-.. autodata:: papersizes.MEDIUM
+.. autodata:: MEDIUM
 
-.. autodata:: papersizes.BROADSHEET
+.. autodata:: BROADSHEET
 
-.. autodata:: papersizes.ROYAL
+.. autodata:: ROYAL
 
-.. autodata:: papersizes.ELEPHANT
+.. autodata:: ELEPHANT
 
-.. autodata:: papersizes.DOUBLE_DEMY
+.. autodata:: DOUBLE_DEMY
 
-.. autodata:: papersizes.QUAD_DEMY
+.. autodata:: QUAD_DEMY
 
-.. autodata:: papersizes.A_FORMAT_PAPERBACK
+.. autodata:: A_FORMAT_PAPERBACK
 
-.. autodata:: papersizes.B_FORMAT_PAPERBACK
+.. autodata:: B_FORMAT_PAPERBACK
 
-.. autodata:: papersizes.C_FORMAT_PAPERBACK
+.. autodata:: C_FORMAT_PAPERBACK
 
-.. autodata:: papersizes.TRADE_PAPERBACK
+.. autodata:: TRADE_PAPERBACK
 
-.. autodata:: papersizes.LULU_US_TRADE_PAPERBACK
+.. autodata:: LULU_US_TRADE_PAPERBACK
 
-.. autodata:: papersizes.LULU_COMIC_BOOK
+.. autodata:: LULU_COMIC_BOOK
 
-.. autodata:: papersizes.LULU_POCKET_BOOK
+.. autodata:: LULU_POCKET_BOOK
 
-.. autodata:: papersizes.LULU_LANDSCAPE_BOOK
+.. autodata:: LULU_LANDSCAPE_BOOK
 
-.. autodata:: papersizes.LULU_SMALL_SQUARE_BOOK
+.. autodata:: LULU_SMALL_SQUARE_BOOK
 
-.. autodata:: papersizes.LULU_ROYAL_BOOK
+.. autodata:: LULU_ROYAL_BOOK
 
-.. autodata:: papersizes.LULU_CROWN_QUARTO_BOOK
+.. autodata:: LULU_CROWN_QUARTO_BOOK
 
-.. autodata:: papersizes.LULU_SQUARE_BOOK
+.. autodata:: LULU_SQUARE_BOOK

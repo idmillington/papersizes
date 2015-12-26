@@ -42,12 +42,11 @@ class PaperSize(collections.namedtuple('PaperSize', 'width height')):
         ``ratio``
             The ratio of the height to the width of the resulting page. So
             a ratio of 1.5 (i.e. 3:2) will be 1.5x as tall as it is wide.
-            Note that the
-            :attr:`~papersizes.papersize.PaperSize.ratio` property returns
+            Note that the ``ratio`` property returns
             the ratio of long to short
             side, not height to width. For the same ratio, therefore, this
             function will generate a paper in portrait orientation. The
-            :mod:`~papersizes.ratios` module provides a series of common
+            ``papersizes.ratios`` module provides a series of common
             ratios.
         """
         if width is None:
@@ -154,8 +153,7 @@ class PaperSize(collections.namedtuple('PaperSize', 'width height')):
 
         ``other``
             The paper size to compare against. This can be given as any
-            (width, height) tuple, it doesn't have to be a
-            :class:`~papersizes.papersize.PaperSize`
+            (width, height) tuple, it doesn't have to be a ``PaperSize``
             instance.
         """
         return abs(self.width - other[0]) <= tolerance and \
@@ -207,8 +205,7 @@ class ISO269Series(object):
     ``initial_size``
         The 'reference' paper size for this series. This is usually a
         large size, most commonly the 0-size. This can be given as any
-        (width, height) tuple, it doesn't have to be a
-        :class:`~papersizes.papersize.PaperSize`
+        (width, height) tuple, it doesn't have to be a ``PaperSize``
         instance.
 
     ``initial_number``

@@ -18,8 +18,15 @@ import os
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-sys.path.insert(0, os.path.abspath('../papersizes'))
+sys.path.insert(0, os.path.abspath('..'))
 import papersizes
+
+# Monkey patch sphinx's autodata
+import sphinx.ext.autodoc
+def __get_real_modname(self):
+	return self.get_attr(self.parent or self.object, '__module__', None) \
+		or self.modname
+sphinx.ext.autodoc.DataDocumenter.get_real_modname = __get_real_modname
 
 # -- General configuration ------------------------------------------------
 
