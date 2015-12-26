@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Paper size ratios (papersizes.ratios) &mdash; Papersizes 0.5.1 documentation</title>
+    
+    <link rel="stylesheet" href="static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.5.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+    <link rel="top" title="Papersizes 0.5.1 documentation" href="index.html" />
+    <link rel="next" title="Units (papersizes.units)" href="units.html" />
+    <link rel="prev" title="Paper size classes (papersizes.papersize)" href="papersize.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="units.html" title="Units (papersizes.units)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="papersize.html" title="Paper size classes (papersizes.papersize)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Papersizes 0.5.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-papersizes.ratios">
+<span id="paper-size-ratios-papersizes-ratios"></span><h1>Paper size ratios (<a class="reference internal" href="#module-papersizes.ratios" title="papersizes.ratios"><code class="xref py py-mod docutils literal"><span class="pre">papersizes.ratios</span></code></a>)<a class="headerlink" href="#module-papersizes.ratios" title="Permalink to this headline">¶</a></h1>
+<p>Page height to width ratios for common page types.</p>
+<dl class="data">
+<dt id="papersizes.ratios.FOUR_THIRDS">
+<code class="descclassname">papersizes.ratios.</code><code class="descname">FOUR_THIRDS</code><em class="property"> = 1.3333333333333333</em><a class="headerlink" href="#papersizes.ratios.FOUR_THIRDS" title="Permalink to this definition">¶</a></dt>
+<dd><p>A ratio of 4:3.</p>
+<p>It was common for papers to be in the 4:3 ratio, also known as the
+Quarto ratio, because the pages of quarto books were roughly in this
+proportion.</p>
+<p>Use with the <a class="reference internal" href="papersize.html#papersizes.papersize.PaperSize.from_ratio" title="papersizes.papersize.PaperSize.from_ratio"><code class="xref py py-meth docutils literal"><span class="pre">from_ratio()</span></code></a> method.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="papersizes.ratios.TWO_THIRDS">
+<code class="descclassname">papersizes.ratios.</code><code class="descname">TWO_THIRDS</code><em class="property"> = 1.5</em><a class="headerlink" href="#papersizes.ratios.TWO_THIRDS" title="Permalink to this definition">¶</a></dt>
+<dd><p>A ratio of 2:3.</p>
+<p>Octavo books are half quarto size, and therefore are roughly in the
+2:3 proportion.</p>
+<p>Use with the <a class="reference internal" href="papersize.html#papersizes.papersize.PaperSize.from_ratio" title="papersizes.papersize.PaperSize.from_ratio"><code class="xref py py-meth docutils literal"><span class="pre">from_ratio()</span></code></a> method.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="papersizes.ratios.ISO_RATIO">
+<code class="descclassname">papersizes.ratios.</code><code class="descname">ISO_RATIO</code><em class="property"> = 1.4142135623730951</em><a class="headerlink" href="#papersizes.ratios.ISO_RATIO" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ratio of height to width for ISO-269 paper.</p>
+<p>It is the ratio such that, if the paper is cut into two equal sheets,
+with the cutparallel to the short side, the two resulting sheets will
+be the same ratio.</p>
+<p>Use with the <a class="reference internal" href="papersize.html#papersizes.papersize.PaperSize.from_ratio" title="papersizes.papersize.PaperSize.from_ratio"><code class="xref py py-meth docutils literal"><span class="pre">from_ratio()</span></code></a> method.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="papersizes.ratios.GOLDEN_RATIO">
+<code class="descclassname">papersizes.ratios.</code><code class="descname">GOLDEN_RATIO</code><em class="property"> = 1.618033988749895</em><a class="headerlink" href="#papersizes.ratios.GOLDEN_RATIO" title="Permalink to this definition">¶</a></dt>
+<dd><p>A ratio considered to be intrinsically beautiful.</p>
+<p>This ratio, sometimes known by the greek letter phi, has been identified
+in classical architecture and composition. It is the ratio such that,
+if the paper is cut to remove a square of the short size, the remaining
+portion will be in this same ratio. It is equal to (1+sqrt(5)) / 2.</p>
+<p>Use with the <a class="reference internal" href="papersize.html#papersizes.papersize.PaperSize.from_ratio" title="papersizes.papersize.PaperSize.from_ratio"><code class="xref py py-meth docutils literal"><span class="pre">from_ratio()</span></code></a> method.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="papersizes.ratios.PENTAGON_RATIO">
+<code class="descclassname">papersizes.ratios.</code><code class="descname">PENTAGON_RATIO</code><em class="property"> = 1.5388417685876266</em><a class="headerlink" href="#papersizes.ratios.PENTAGON_RATIO" title="Permalink to this definition">¶</a></dt>
+<dd><p>A ratio considered to be beautiful.</p>
+<p>It is the ratio of one side of a regular pentagon to its opposite vertex.</p>
+<p>Use with the <a class="reference internal" href="papersize.html#papersizes.papersize.PaperSize.from_ratio" title="papersizes.papersize.PaperSize.from_ratio"><code class="xref py py-meth docutils literal"><span class="pre">from_ratio()</span></code></a> method.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="papersize.html"
+                        title="previous chapter">Paper size classes (<code class="docutils literal"><span class="pre">papersizes.papersize</span></code>)</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="units.html"
+                        title="next chapter">Units (<code class="docutils literal"><span class="pre">papersizes.units</span></code>)</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="sources/ratios.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="units.html" title="Units (papersizes.units)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="papersize.html" title="Paper size classes (papersizes.papersize)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Papersizes 0.5.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2006-2015, Ian Millington.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.3.
+    </div>
+  </body>
+</html>
