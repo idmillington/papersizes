@@ -24,7 +24,7 @@
     <script type="text/javascript" src="static/underscore.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
     <link rel="top" title="Papersizes 1.0.0 documentation" href="index.html" />
-    <link rel="next" title="Units (units)" href="units.html" />
+    <link rel="next" title="Paper size ratios (papersizes)" href="papersizes_ratios.html" />
     <link rel="prev" title="Paper size constants (papersizes)" href="papersizes.html" /> 
   </head>
   <body role="document">
@@ -38,7 +38,7 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="units.html" title="Units (units)"
+          <a href="papersizes_ratios.html" title="Paper size ratios (papersizes)"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="papersizes.html" title="Paper size constants (papersizes)"
@@ -92,6 +92,19 @@ die cuts have a larger bleed.</p>
 <dt id="papersizes.PaperSize.from_mm">
 <em class="property">classmethod </em><code class="descname">from_mm</code><span class="sig-paren">(</span><em>Class</em>, <em>width_in_mm</em>, <em>height_in_mm</em><span class="sig-paren">)</span><a class="headerlink" href="#papersizes.PaperSize.from_mm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts from width and height in mm into standard pts.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="papersizes.PaperSize.from_radio">
+<em class="property">classmethod </em><code class="descname">from_radio</code><span class="sig-paren">(</span><em>Class</em>, <em>width=None</em>, <em>height=None</em>, <em>ratio=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#papersizes.PaperSize.from_radio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new paper size from the given ratio and one dimension.</p>
+<p>Arguments:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">ratio</span></code></dt>
+<dd>The ratio of the height to the width of the resulting page. So
+a ratio of 3/2 will be 1.5x as tall as it is wide. This module
+provides a series of common ratios.</dd>
+</dl>
 </dd></dl>
 
 <dl class="classmethod">
@@ -203,8 +216,8 @@ argument.</dd>
   <p class="topless"><a href="papersizes.html"
                         title="previous chapter">Paper size constants (<code class="docutils literal"><span class="pre">papersizes</span></code>)</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="units.html"
-                        title="next chapter">Units (<code class="docutils literal"><span class="pre">units</span></code>)</a></p>
+  <p class="topless"><a href="papersizes_ratios.html"
+                        title="next chapter">Paper size ratios (<code class="docutils literal"><span class="pre">papersizes</span></code>)</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -239,7 +252,7 @@ argument.</dd>
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="units.html" title="Units (units)"
+          <a href="papersizes_ratios.html" title="Paper size ratios (papersizes)"
              >next</a> |</li>
         <li class="right" >
           <a href="papersizes.html" title="Paper size constants (papersizes)"

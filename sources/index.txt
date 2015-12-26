@@ -23,6 +23,7 @@ Contents:
 
    papersizes
    papersizes_classes
+   papersizes_ratios
    units
 
 Indices and tables
