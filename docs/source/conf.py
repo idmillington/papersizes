@@ -21,7 +21,7 @@ import os
 sys.path.insert(0, os.path.abspath('..'))
 import papersizes
 
-# Monkey patch sphinx's autodata
+# Monkey patch sphinx's autodata to fix bug 857
 import sphinx.ext.autodoc
 def __get_real_modname(self):
 	return self.get_attr(self.parent or self.object, '__module__', None) \
