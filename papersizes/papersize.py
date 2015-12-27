@@ -2,6 +2,7 @@
 """
 Page sizes and various mechanisms for manipulating them.
 """
+import math
 import collections
 from .units import mm, inch
 
@@ -17,11 +18,6 @@ class PaperSize(collections.namedtuple('PaperSize', 'width height')):
     than a raw (width, height) tuple, to allow additonal methods to
     be defined."""
     __slots__ = ()
-
-    @classmethod
-    def from_tuple(Class, tuple_):
-        """Convert a tuple of width, height into a paper size."""
-        return Class(*tuple_)
 
     @classmethod
     def from_mm(Class, width_in_mm, height_in_mm):
@@ -159,7 +155,7 @@ class PaperSize(collections.namedtuple('PaperSize', 'width height')):
         return abs(self.width - other[0]) <= tolerance and \
             abs(self.height - other[1]) <= tolerance
 
-    def add_bleed(paper_size, bleed):
+    def add_bleed(self, bleed):
         """Return a paper size with the given bleed added.
 
         Standard bleeds are 3mm internationally and 1/8" US. Large images and
@@ -169,14 +165,31 @@ class PaperSize(collections.namedtuple('PaperSize', 'width height')):
         else:
             return self
 
-    def __repr__(self):
-        return unicode(self)
+    def as_pt_str(self):
+        """Printable description of the size, to the nearest point."""
+        return '{0:.0f}x{1:.0f}pt'.format(self.width, self.height)
 
-    def __unicode__(self):
-        return '{0:.0f}x{1:.0f}pt ({2:.0f}x{3:.0f}mm, {4:.1f}x{5:.1f}")'.format(
-                self.width, self.height,
-                self.width / mm, self.height / mm,
-                self.width / inch, self.height / inch)
+    def as_mm_str(self):
+        """Printable description of the size, to the nearest mm."""
+        return '{0:.0f}x{1:.0f}mm'.format(self.width / mm, self.height / mm)
+
+    def as_inch_str(self, unit='"'):
+        """Printable description of the size, to the nearest ⅛ of an inch."""
+        EIGHTHS = ['', '⅛', '¼', '⅜', '½', '⅝', '¾', '⅞']
+        def _to_eight(val):
+            val /= inch
+            whole = math.floor(val)
+            eighth = round(val * 8) % 8
+            return '{0:.0f}{1}'.format(whole, EIGHTHS[eighth])
+        return '{0}x{1}{2}'.format(
+            _to_eight(self.width), _to_eight(self.height), unit)
+
+    def __repr__(self):
+        return 'PaperSize({0:f}, {1:f})'.format(self.width, self.height)
+
+    def __str__(self):
+        return '{0} ({1}, {2})'.format(
+                self.as_pt_str(), self.as_mm_str(), self.as_inch_str())
 
 # ----------------------------------------------------------------------------
 # Page size generator.
