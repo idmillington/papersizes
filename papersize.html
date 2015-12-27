@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Paper size classes (papersizes.papersize) &mdash; Papersizes 0.5.1 documentation</title>
+    <title>Paper size classes (papersizes.papersize) &mdash; Papersizes 0.5.2 documentation</title>
     
     <link rel="stylesheet" href="static/classic.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.5.1',
+        VERSION:     '0.5.2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="static/jquery.js"></script>
     <script type="text/javascript" src="static/underscore.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
-    <link rel="top" title="Papersizes 0.5.1 documentation" href="index.html" />
+    <link rel="top" title="Papersizes 0.5.2 documentation" href="index.html" />
     <link rel="next" title="Paper size ratios (papersizes.ratios)" href="ratios.html" />
     <link rel="prev" title="Paper size constants (papersizes)" href="papersizes.html" /> 
   </head>
@@ -43,7 +43,7 @@
         <li class="right" >
           <a href="papersizes.html" title="Paper size constants (papersizes)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Papersizes 0.5.1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Papersizes 0.5.2 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -65,7 +65,7 @@ than a raw (width, height) tuple, to allow additonal methods to
 be defined.</p>
 <dl class="method">
 <dt id="papersizes.papersize.PaperSize.add_bleed">
-<code class="descname">add_bleed</code><span class="sig-paren">(</span><em>paper_size</em>, <em>bleed</em><span class="sig-paren">)</span><a class="headerlink" href="#papersizes.papersize.PaperSize.add_bleed" title="Permalink to this definition">¶</a></dt>
+<code class="descname">add_bleed</code><span class="sig-paren">(</span><em>bleed</em><span class="sig-paren">)</span><a class="headerlink" href="#papersizes.papersize.PaperSize.add_bleed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a paper size with the given bleed added.</p>
 <p>Standard bleeds are 3mm internationally and 1/8&#8221; US. Large images and
 die cuts have a larger bleed.</p>
@@ -75,6 +75,24 @@ die cuts have a larger bleed.</p>
 <dt id="papersizes.papersize.PaperSize.area_in_sq_pts">
 <code class="descname">area_in_sq_pts</code><a class="headerlink" href="#papersizes.papersize.PaperSize.area_in_sq_pts" title="Permalink to this definition">¶</a></dt>
 <dd><p>The area of this paper.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="papersizes.papersize.PaperSize.as_inch_str">
+<code class="descname">as_inch_str</code><span class="sig-paren">(</span><em>unit='&quot;'</em><span class="sig-paren">)</span><a class="headerlink" href="#papersizes.papersize.PaperSize.as_inch_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Printable description of the size, to the nearest ⅛ of an inch.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="papersizes.papersize.PaperSize.as_mm_str">
+<code class="descname">as_mm_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#papersizes.papersize.PaperSize.as_mm_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Printable description of the size, to the nearest mm.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="papersizes.papersize.PaperSize.as_pt_str">
+<code class="descname">as_pt_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#papersizes.papersize.PaperSize.as_pt_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Printable description of the size, to the nearest point.</p>
 </dd></dl>
 
 <dl class="method">
@@ -111,12 +129,6 @@ function will generate a paper in portrait orientation. The
 <code class="docutils literal"><span class="pre">papersizes.ratios</span></code> module provides a series of common
 ratios.</dd>
 </dl>
-</dd></dl>
-
-<dl class="classmethod">
-<dt id="papersizes.papersize.PaperSize.from_tuple">
-<em class="property">classmethod </em><code class="descname">from_tuple</code><span class="sig-paren">(</span><em>Class</em>, <em>tuple_</em><span class="sig-paren">)</span><a class="headerlink" href="#papersizes.papersize.PaperSize.from_tuple" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert a tuple of width, height into a paper size.</p>
 </dd></dl>
 
 <dl class="method">
@@ -279,7 +291,7 @@ argument.</dd>
         <li class="right" >
           <a href="papersizes.html" title="Paper size constants (papersizes)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Papersizes 0.5.1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Papersizes 0.5.2 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
