@@ -6,16 +6,16 @@ argument in an argument definition in the ``argparse`` module.
 
 .. code-block:: python
 
-	import papersizes
-	from papersizes import parse
-	from papersizes.units import mm
+    import papersizes
+    from papersizes import parse
+    from papersizes.units import mm
 
     parser.add_argument(
-    	'-p', '--paper',
-    	type=parse.paper_size, default=papersizes.A4)
+        '-p', '--paper',
+        type=parse.paper_size, default=papersizes.A4)
     parser.add_argument(
-    	'-m', '--margin',
-    	type=parse.dimension, default=5*mm)
+        '-m', '--margin',
+        type=parse.dimension, default=5*mm)
 
 Parsing of dimensions supports a number followed by a unit, for example:
 
@@ -57,4 +57,4 @@ Module Content
 --------------
 
 .. automodule:: papersizes.parse
-	:members:
+    :members:
