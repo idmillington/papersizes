@@ -41,6 +41,7 @@ Contents:
    papersize
    ratios
    units
+   parse
 
 Indices and tables
 ==================

@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Parsing paper sizes (papersizes.parse) &mdash; Papersizes 0.6.0 documentation</title>
+    
+    <link rel="stylesheet" href="static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.6.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+    <link rel="top" title="Papersizes 0.6.0 documentation" href="index.html" />
+    <link rel="prev" title="Units (papersizes.units)" href="units.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="units.html" title="Units (papersizes.units)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Papersizes 0.6.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="parsing-paper-sizes-papersizes-parse">
+<h1>Parsing paper sizes (<a class="reference internal" href="#module-papersizes.parse" title="papersizes.parse"><code class="xref py py-mod docutils literal"><span class="pre">papersizes.parse</span></code></a>)<a class="headerlink" href="#parsing-paper-sizes-papersizes-parse" title="Permalink to this headline">¶</a></h1>
+<p>This module contains simple parsing methods suitable for use as the <code class="docutils literal"><span class="pre">type</span></code>
+argument in an argument definition in the <code class="docutils literal"><span class="pre">argparse</span></code> module.</p>
+<div class="highlight-python"><div class="highlight"><pre>    <span class="kn">import</span> <span class="nn">papersizes</span>
+    <span class="kn">from</span> <span class="nn">papersizes</span> <span class="kn">import</span> <span class="n">parse</span>
+    <span class="kn">from</span> <span class="nn">papersizes.units</span> <span class="kn">import</span> <span class="n">mm</span>
+
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+    <span class="s">&#39;-p&#39;</span><span class="p">,</span> <span class="s">&#39;--paper&#39;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="n">parse</span><span class="o">.</span><span class="n">paper_size</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">papersizes</span><span class="o">.</span><span class="n">A4</span><span class="p">)</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+    <span class="s">&#39;-m&#39;</span><span class="p">,</span> <span class="s">&#39;--margin&#39;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="n">parse</span><span class="o">.</span><span class="n">dimension</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">5</span><span class="o">*</span><span class="n">mm</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Parsing of dimensions supports a number followed by a unit, for example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">dimension</span><span class="p">(</span><span class="s">&#39;3mm&#39;</span><span class="p">)</span>
+<span class="n">dimension</span><span class="p">(</span><span class="s">&#39;12 inch&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>with various synonyms for the units. To support inches, the parser also
+copes with fractions.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">dimension</span><span class="p">(</span><span class="s">&#39;3½&quot;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Paper sizes supports any of the defined sizes as text, case-insensitive,
+with underscores in the variable names converted to spaces:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">dimension</span><span class="p">(</span><span class="s">&#39;SRA2&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Width and height can also be given separated by <code class="docutils literal"><span class="pre">'x'</span></code>, with units following
+the second number (and following the first, optionally):</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">dimension</span><span class="p">(</span><span class="s">&#39;8½ x 11&quot;&#39;</span><span class="p">)</span>
+<span class="n">dimension</span><span class="p">(</span><span class="s">&#39;8½x11&quot;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Finally, any paper size, defined by name or dimensions, can be followed with
+the strings <code class="docutils literal"><span class="pre">'</span> <span class="pre">landscape'</span></code> or <code class="docutils literal"><span class="pre">'</span> <span class="pre">portrait'</span></code> to change their orientaton.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">dimension</span><span class="p">(</span><span class="s">&#39;A3 landscape&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="module-papersizes.parse">
+<span id="module-content"></span><h2>Module Content<a class="headerlink" href="#module-papersizes.parse" title="Permalink to this headline">¶</a></h2>
+<p>Parsing for dimensions and paper sizes.</p>
+<dl class="function">
+<dt id="papersizes.parse.dimension">
+<code class="descclassname">papersizes.parse.</code><code class="descname">dimension</code><span class="sig-paren">(</span><em>size_string</em><span class="sig-paren">)</span><a class="headerlink" href="#papersizes.parse.dimension" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses a numeric dimension, returning a size in points.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="papersizes.parse.paper_size">
+<code class="descclassname">papersizes.parse.</code><code class="descname">paper_size</code><span class="sig-paren">(</span><em>size_string</em><span class="sig-paren">)</span><a class="headerlink" href="#papersizes.parse.paper_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses a paper size string, either a name or a pair of dimensions.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Parsing paper sizes (<code class="docutils literal"><span class="pre">papersizes.parse</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-papersizes.parse">Module Content</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="units.html"
+                        title="previous chapter">Units (<code class="docutils literal"><span class="pre">papersizes.units</span></code>)</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="sources/parse.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="units.html" title="Units (papersizes.units)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Papersizes 0.6.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2006-2015, Ian Millington.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.3.
+    </div>
+  </body>
+</html>
