@@ -175,7 +175,7 @@ class PaperSize(collections.namedtuple('PaperSize', 'width height')):
 
     def as_inch_str(self, unit='"'):
         """Printable description of the size, to the nearest ⅛ of an inch."""
-        EIGHTHS = ['', '⅛', '¼', '⅜', '½', '⅝', '¾', '⅞']
+        EIGHTHS = ('', '⅛', '¼', '⅜', '½', '⅝', '¾', '⅞')
         def _to_eight(val):
             val /= inch
             whole = math.floor(val)
