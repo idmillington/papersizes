@@ -24,7 +24,7 @@ class, import one of the other modules directly, e.g.
 
 .. code-block:: python
 
-	from papersizes.papersize import PaperSize
+    from papersizes.papersize import PaperSize
 
 This package uses postscript points (defined as 1/72 inch) as its standard
 units, because this is the standard unit for PDF files. The
